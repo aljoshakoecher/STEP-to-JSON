@@ -1,9 +1,12 @@
+// TODO: Fix vars and lets
+
 // relevant imports
 var fs = require("fs");
 var colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
-const parser = require('./../lib/parser');
+const StepToJsonParser = require('./../lib/parser');
+const parser = new StepToJsonParser();
 
 // variables for preprocessed content
 var FILE_NAME;
@@ -58,26 +61,27 @@ let preBar = new cliProgress.SingleBar({
     hideCursor: true
 });
 preBar.start(lines.length, 0);
+// TODO: Loop can be stopped when all attributes are found...
 for (let i = 0; i < lines.length; i++) {
     preBar.increment();
     let lineString = lines[i];
     if (lineString.includes("FILE_NAME")) {
-        FILE_NAME = remove_linebreaks(lineString);
+        FILE_NAME = parser.remove_linebreaks(lineString);
     } else if (lineString.includes("FILE_SCHEMA")) {
-        FILE_SCHEMA = remove_linebreaks(lineString);
+        FILE_SCHEMA = parser.remove_linebreaks(lineString);
     } else if (lineString.includes("FILE_DESCRIPTION")) {
-        FILE_DESCRIPTION = remove_linebreaks(lineString);
+        FILE_DESCRIPTION = parser.remove_linebreaks(lineString);
     } else if (lineString.includes("PRODUCT_DEFINITION(")) {
-        PRODUCT_DEFINITIONS.push(remove_linebreaks(lineString));
+        PRODUCT_DEFINITIONS.push(parser.remove_linebreaks(lineString));
     } else if (lineString.includes("NEXT_ASSEMBLY_USAGE_OCCURRENCE(")) {
-        NEXT_ASSEMBLY_USAGE_OCCURRENCE.push(remove_linebreaks(lineString));
+        NEXT_ASSEMBLY_USAGE_OCCURRENCE.push(parser.remove_linebreaks(lineString));
     }
 }
 preBar.stop();
 
 // get relations and products
-var relations = parse_NEXT_ASSEMBLY_USAGE_OCCURRENCE(step.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE);
-var products = parse_PRODUCT_DEFINITION(step.data.PRODUCT_DEFINITION);
+var relations = parser.parse_NEXT_ASSEMBLY_USAGE_OCCURRENCE(step.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE);
+var products = parser.parse_PRODUCT_DEFINITION(step.data.PRODUCT_DEFINITION);
 
 var rootAssemblyObject = {}
 
@@ -99,7 +103,7 @@ products.forEach(element => {
 });
 
 // build first level assembly object
-var assemblyObject = buildStructureObject(rootAssemblyObject);
+var assemblyObject = parser.buildStructureObject(rootAssemblyObject);
 
 // add recursively to assembly object
 let buildBar = new cliProgress.SingleBar({
@@ -109,7 +113,7 @@ let buildBar = new cliProgress.SingleBar({
     hideCursor: true
 });
 buildBar.start(relations.length, 0);
-recursiveBuild(assemblyObject);
+parser.recursiveBuild(assemblyObject);
 buildBar.update(relations.length);
 buildBar.stop();
 
