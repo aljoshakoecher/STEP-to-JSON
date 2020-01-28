@@ -16,6 +16,7 @@
     "SYSTEM",
     "STRUCTURE"
   ],
+  "type": "module",
   "author": "Hildebrandt",
   "license": "MIT",
   "bugs": {
@@ -25,6 +26,7 @@
   "dependencies": {
     "cli-progress": "^3.4.0",
     "colors": "^1.4.0",
+    "rxjs": "^6.5.4",
     "yargs": "^15.0.2"
   }
 }
