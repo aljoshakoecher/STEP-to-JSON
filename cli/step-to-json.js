@@ -1,4 +1,5 @@
 // TODO: Fix vars and lets
+const Subject = require("rxjs").Subject;
 
 // relevant imports
 var fs = require("fs");
@@ -6,7 +7,9 @@ var colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
 const StepToJsonParser = require('./../lib/parser');
+
 const parser = new StepToJsonParser();
+
 
 // variables for preprocessed content
 var FILE_NAME;
@@ -55,7 +58,7 @@ try {
 
 // preprocess the content by tag
 let preBar = new cliProgress.SingleBar({
-    format: 'Preprocessing the step file |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Lines',
+    format: 'Preprocessing the step file \t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Lines',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
@@ -80,8 +83,37 @@ for (let i = 0; i < lines.length; i++) {
 preBar.stop();
 
 // get relations and products
-var relations = parser.parse_NEXT_ASSEMBLY_USAGE_OCCURRENCE(step.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE);
-var products = parser.parse_PRODUCT_DEFINITION(step.data.PRODUCT_DEFINITION);
+let bar = new cliProgress.SingleBar({
+    format: 'Parsing relations \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Relations',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true
+});
+bar.start(step.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE.length, 0);
+const assemblyUsageSubject = new Subject();
+assemblyUsageSubject.subscribe({
+    next:       (data) =>  {bar.update(data)},
+    complete:   () => {bar.stop()}
+});
+    
+var relations = parser.parse_NEXT_ASSEMBLY_USAGE_OCCURRENCE(step.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE, assemblyUsageSubject);
+
+
+let productBar = new cliProgress.SingleBar({
+    format: 'Parsing products \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true
+});
+productBar.start(step.data.PRODUCT_DEFINITION.length);
+
+const productDefinitionSubject = new Subject();
+productDefinitionSubject.subscribe({
+    next:       (data) =>  {productBar.update(data)},
+    complete:   () => {productBar.stop()}
+});
+
+var products = parser.parse_PRODUCT_DEFINITION(step.data.PRODUCT_DEFINITION, productDefinitionSubject);
 
 var rootAssemblyObject = {}
 
@@ -107,17 +139,23 @@ var assemblyObject = parser.buildStructureObject(rootAssemblyObject);
 
 // add recursively to assembly object
 let buildBar = new cliProgress.SingleBar({
-    format: 'Building the output |' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks',
+    format: 'Building the output \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
 });
 buildBar.start(relations.length, 0);
-parser.recursiveBuild(assemblyObject);
-buildBar.update(relations.length);
-buildBar.stop();
 
-//  write file
+const buildSubject = new Subject();
+buildSubject.subscribe({
+    next:       (data) =>  {buildBar.update(data)},
+    complete:   () => {buildBar.stop()}
+});
+
+parser.recursiveBuild(assemblyObject, buildSubject);
+
+
+// write file
 fs.writeFileSync("./assembly.json", JSON.stringify(assemblyObject));
 
 //  provide feedback
