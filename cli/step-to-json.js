@@ -33,22 +33,22 @@ let step = {
 // cmd line tool
 const argv = yargs(process.argv)
     .wrap(132)
-    .demand("filename")
-    .string("filename")
-    .describe("filename", "the step file to be used, e.g. mystep.stp")
+    .demand("fileName")
+    .string("File Name")
+    .describe("File Name", "the step file to be used, e.g. mystep.stp")
 
-    .alias("f", "filename")
+    .alias("f", "fileName")
     .argv;
 
 //  start timer
 console.time("Elapsed time")
 
 // read the file and split lines by ";"
-console.log("Reading the specified file ...".yellow)
+console.log(`\nReading file "${argv.fileName}"`.yellow)
 
 let lines;
 try {
-    const file = fs.readFileSync(argv.filename);
+    const file = fs.readFileSync(argv.fileName);
     lines = file.toString().split(";")
 } catch (error) {
     if (error.code == "ENOENT") {
@@ -66,22 +66,22 @@ const preBar = new cliProgress.SingleBar({
 });
 preBar.start(lines.length, 0);
 
-for (let i = 0; i < lines.length; i++) {
+lines.forEach(line => {
     preBar.increment();
-    let lineString = lines[i];
-    if (lineString.includes("FILE_NAME")) {
-        FILE_NAME = parser.remove_linebreaks(lineString);
-    } else if (lineString.includes("FILE_SCHEMA")) {
-        FILE_SCHEMA = parser.remove_linebreaks(lineString);
-    } else if (lineString.includes("FILE_DESCRIPTION")) {
-        FILE_DESCRIPTION = parser.remove_linebreaks(lineString);
-    } else if (lineString.includes("PRODUCT_DEFINITION(")) {
-        PRODUCT_DEFINITIONS.push(parser.remove_linebreaks(lineString));
-    } else if (lineString.includes("NEXT_ASSEMBLY_USAGE_OCCURRENCE(")) {
-        NEXT_ASSEMBLY_USAGE_OCCURRENCE.push(parser.remove_linebreaks(lineString));
+    if (line.includes("FILE_NAME")) {
+        FILE_NAME = parser.remove_linebreaks(line);
+    } else if (line.includes("FILE_SCHEMA")) {
+        FILE_SCHEMA = parser.remove_linebreaks(line);
+    } else if (line.includes("FILE_DESCRIPTION")) {
+        FILE_DESCRIPTION = parser.remove_linebreaks(line);
+    } else if (line.includes("PRODUCT_DEFINITION(")) {
+        PRODUCT_DEFINITIONS.push(parser.remove_linebreaks(line));
+    } else if (line.includes("NEXT_ASSEMBLY_USAGE_OCCURRENCE(")) {
+        NEXT_ASSEMBLY_USAGE_OCCURRENCE.push(parser.remove_linebreaks(line));
     }
-}
+})
 preBar.stop();
+
 
 // get relations and products
 const relationsBar = new cliProgress.SingleBar({
@@ -116,22 +116,18 @@ productDefinitionSubject.subscribe({
 
 const products = parser.parse_PRODUCT_DEFINITION(step.data.PRODUCT_DEFINITION, productDefinitionSubject);
 
+
 let rootAssemblyObject = {}
 
-// identify rootAssemblyKey
-products.forEach(element => {
-    const productKey = element.key;
-    const productName = element.name;
-    for (let i = 0; i < relations.length; i++) {
+// identify rootAssemblyObject
+products.forEach(product => {
+    // Try to find a relation where the product is the container and also contains elements
+    const productIsContainer = relations.some(relation => {return relation.container === product.key});
+    const productIsContained = relations.some(relation => {return relation.contains === product.key});
 
-        if (relations[i].contains == productKey) {
-            break
-        } else if (relations[i].contains != productKey && i == (relations.length - 1)) {
-            rootAssemblyObject = {
-                key: productKey,
-                name: productName,
-            }
-        }
+    // Root assembly acts a container, but is not contained in any other product
+    if(productIsContainer && !productIsContained) {
+        rootAssemblyObject = product
     }
 });
 
@@ -163,5 +159,5 @@ fs.writeFileSync("./assembly.json", JSON.stringify(assemblyObject));
 console.log("Success!".green)
 console.timeLog("Elapsed time")
 console.log("Analysed relations:                    " + relations.length)
-console.log("Analysed assemblies and components:    " + products.length)
+console.log("Analysed assemblies and components:    " + products.length + "\n")
 
