@@ -1,28 +1,30 @@
 {
   "name": "step-to-json",
   "version": "1.0.0",
-  "description": "A simple command line tool that extracts the system structure of a STEP (ISO 10303-21) file and outputs it as .json",
-  "main": "step-to-json.js",
+  "description": "A simple command line tool that extracts the system structure of a STEP (ISO 10303-44) file and outputs it as .json",
+  "main": "./lib/parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ConstantinHildebrandt/STEP-to-JSON.git"
+    "url": "git+https://github.com/aljoshakoecher/STEP-to-JSON.git"
   },
   "keywords": [
     "STEP",
     "JSON",
-    "SYSTEM",
-    "STRUCTURE"
+    "parser",
+    "assembly",
+    "system",
+    "structure"
   ],
   "type": "module",
-  "author": "Hildebrandt",
+  "author": "Aljosha Köcher",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ConstantinHildebrandt/STEP-to-JSON/issues"
+    "url": "https://github.com/aljoshakoecher/STEP-to-JSON/issues"
   },
-  "homepage": "https://github.com/ConstantinHildebrandt/STEP-to-JSON#readme",
+  "homepage": "https://github.com/aljoshakoecher/STEP-to-JSON#readme",
   "dependencies": {
     "cli-progress": "^3.4.0",
     "colors": "^1.4.0",
