@@ -1,4 +1,3 @@
-// relevant imports
 const fs = require("fs");
 const Subject = require("rxjs").Subject;
 const colors = require('colors');
@@ -6,7 +5,7 @@ const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
 const StepToJsonParser = require('./../lib/parser');
 
-const parser = new StepToJsonParser();
+
 
 // cli-tool setup
 const argv = yargs(process.argv)
@@ -22,47 +21,21 @@ const argv = yargs(process.argv)
 console.time("Elapsed time")
 console.log(`\nReading file "${argv.fileName}"`.yellow)
 
-// count lines (for first progress bar)
-let lines;
-try {
-    const file = fs.readFileSync(argv.fileName);
-    lines = file.toString().split(";")
-} catch (error) {
-    if (error.code == "ENOENT") {
-        console.error("Specified file could not be found...".red)
-        process.exit(0)
-    }
-}
+const parser = new StepToJsonParser(argv.fileName);
 
 
-// Step 1: Preprocess the object
-// (Setup progress bar, setup subscription for tracking progress, call parser function for preprocessing)
-const preBar = new cliProgress.SingleBar({
-    format: 'Preprocessing the step file \t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Lines',
-    barCompleteChar: '\u2588',
-    barIncompleteChar: '\u2591',
-    hideCursor: true
-});
-preBar.start(lines.length, 0);
-
-const preprocessingSubject = new Subject();
-preprocessingSubject.subscribe({
-    next: (data) => {preBar.update(data)},
-    complete: () => {preBar.stop()}
-})
-
-const preprocessedObject = parser.preprocessFileContent(lines, preprocessingSubject);
+const preprocessedObject = parser.getPreProcessedObject();
 
 
-// Step 2: Parse all relations
+// Step 1: Parse all relations
 // (Setup progress bar, setup subscription for tracking progress, call parser function for relation-parsing)
 const relationsBar = new cliProgress.SingleBar({
-    format: 'Parsing relations \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Relations found',
+    format: 'Parsing relations \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Relations parsed',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
 });
-relationsBar.start(preprocessedObject.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE.length, 0);
+relationsBar.start(preprocessedObject.data.nextAssemblyUsageOccurences.length, 0);
 
 const assemblyUsageSubject = new Subject();
 assemblyUsageSubject.subscribe({
@@ -70,18 +43,18 @@ assemblyUsageSubject.subscribe({
     complete:   () => {relationsBar.stop()}
 });
 
-const relations = parser.parse_NEXT_ASSEMBLY_USAGE_OCCURRENCE(preprocessedObject.data.NEXT_ASSEMBLY_USAGE_OCCURRENCE, assemblyUsageSubject);
+const relations = parser.parseNextAssemblyUsageOccurences(preprocessedObject.data.nextAssemblyUsageOccurences, assemblyUsageSubject);
 
 
-// Step 3: Parse all products
+// Step 2: Parse all products
 // (Setup progress bar, setup subscription for tracking progress, call parser function for product-parsing)
 const productBar = new cliProgress.SingleBar({
-    format: 'Parsing products \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Products found',
+    format: 'Parsing products \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Products parsed',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
 });
-productBar.start(preprocessedObject.data.PRODUCT_DEFINITION.length);
+productBar.start(preprocessedObject.data.productDefinitions.length);
 
 const productDefinitionSubject = new Subject();
 productDefinitionSubject.subscribe({
@@ -89,15 +62,16 @@ productDefinitionSubject.subscribe({
     complete:   () => {productBar.stop()}
 });
 
-const products = parser.parse_PRODUCT_DEFINITION(preprocessedObject.data.PRODUCT_DEFINITION, productDefinitionSubject);
+const products = parser.parseProductDefinitions(preprocessedObject.data.productDefinitions, productDefinitionSubject);
 
 
-const rootAssemblyObject = parser.identifyRootAssembly(products);
+const rootAssemblyObject = parser.identifyRootAssembly();
+console.log(rootAssemblyObject);
 
 
 // add recursively to assembly object
 const buildBar = new cliProgress.SingleBar({
-    format: 'Building the output \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Chunks',
+    format: 'Building the output \t\t|' + colors.cyan('{bar}') + '| {percentage}% || {value}/{total} Relations analyzed',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
@@ -111,12 +85,17 @@ buildSubject.subscribe({
 });
 
 // build first level assembly object
-const assemblyObject = parser.buildStructureObject(rootAssemblyObject, buildSubject);
+const result = parser.buildStructureObject(rootAssemblyObject, buildSubject);
 
 // write file
-fs.writeFileSync("./assembly.json", JSON.stringify(assemblyObject));
+const outputFileName = "assembly.json"
+parser.writeFile(outputFileName, result);
 
 //  provide feedback
 console.log("Success!".green)
 console.timeLog("Elapsed time")
+
+
+console.log('\n\n***\nparsing again with parse-function');
+parser.parse(argv.fileName)
 
