@@ -2,7 +2,7 @@ const Subject = require("rxjs").Subject;
 const colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
-const StepToJsonParser = require('./../lib/parser');
+const StepToJsonParser = require('./../dist/parser').StepToJsonParser;
 
 
 
