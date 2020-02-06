@@ -2,9 +2,13 @@
   "name": "step-to-json",
   "version": "1.0.1",
   "description": "A simple command line tool that extracts the system structure of a STEP (ISO 10303-44) file and outputs it as .json",
-  "main": "./lib/parser.js",
+  "main": "./dist/parser.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require @babel/register",
+    "build": "babel lib --out-dir ./dist --source-maps"
   },
   "repository": {
     "type": "git",
