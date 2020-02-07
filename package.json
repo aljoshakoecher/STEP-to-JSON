@@ -1,6 +1,6 @@
 {
   "name": "step-to-json",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "description": "A simple command line tool that extracts the system structure of a STEP (ISO 10303-44) file and outputs it as .json",
   "main": "./dist/parser.js",
   "files": [
@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "test": "mocha --require @babel/register",
-    "build": "babel lib --out-dir ./dist --source-maps"
+    "build": "npm run webpack",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,10 @@
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
-    "mocha": "^7.0.1"
+    "mocha": "^7.0.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
