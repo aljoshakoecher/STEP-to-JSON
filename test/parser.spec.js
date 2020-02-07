@@ -3,7 +3,8 @@ import * as fs  from "fs";
 import {StepToJsonParser} from "../lib/parser"
 
 
-const parser = new StepToJsonParser(__dirname +  "/Workbench.stp");
+const stepFile = fs.readFileSync(__dirname +  "/Workbench.stp")
+const parser = new StepToJsonParser(stepFile);
 
 
 describe("Testing parser", () => {
