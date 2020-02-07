@@ -1,9 +1,9 @@
-const fs = require("fs");
 const Subject = require("rxjs").Subject;
 const colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
-const StepToJsonParser = require('./../lib/parser');
+const fs = require("fs");
+const StepToJsonParser = require('./../dist/parser').StepToJsonParser;
 
 
 
@@ -21,7 +21,8 @@ const argv = yargs(process.argv)
 console.time("Elapsed time")
 console.log(`\nReading file "${argv.fileName}"`.yellow)
 
-const parser = new StepToJsonParser(argv.fileName);
+const file = fs.readFileSync(argv.fileName);
+const parser = new StepToJsonParser(file);
 
 
 const preprocessedObject = parser.getPreProcessedObject();
@@ -88,14 +89,10 @@ buildSubject.subscribe({
 const result = parser.buildStructureObject(rootAssemblyObject, buildSubject);
 
 // write file
-const outputFileName = "assembly.json"
-parser.writeFile(outputFileName, result);
+parser.writeFile(result);
 
 //  provide feedback
 console.log("Success!".green)
 console.timeLog("Elapsed time")
 
-
-console.log('\n\n***\nparsing again with parse-function');
-parser.parse(argv.fileName)
 
