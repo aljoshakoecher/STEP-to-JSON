@@ -1,6 +1,6 @@
 import { assert } from "chai"
 import * as fs  from "fs";
-import {StepToJsonParser} from "../lib/parser"
+import {StepToJsonParser} from "../src/parser"
 
 
 const stepFile = fs.readFileSync(__dirname +  "/Workbench.stp")

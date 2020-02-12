@@ -6,7 +6,6 @@ const fs = require("fs");
 const StepToJsonParser = require('./../dist/parser').StepToJsonParser;
 
 
-
 // cli-tool setup
 const argv = yargs(process.argv)
     .wrap(132)
@@ -88,8 +87,6 @@ buildSubject.subscribe({
 // build first level assembly object
 const result = parser.buildStructureObject(rootAssemblyObject, buildSubject);
 
-// write file
-parser.writeFile(result);
 
 //  provide feedback
 console.log("Success!".green)

@@ -1,6 +1,5 @@
 import { Subject } from "rxjs";
 
-
 class StepToJsonParser {
 
     constructor(file) {
@@ -191,13 +190,7 @@ class StepToJsonParser {
         return structureObject;
     }
 
-
-    writeFile(content, outputFilePath="./result.json") {
-        const fs = require('fs');
-        fs.writeFileSync(outputFilePath, JSON.stringify(content));
-    }
-
-
+    
     /**
      * Checks if a productId serves as a container for other products
      *
