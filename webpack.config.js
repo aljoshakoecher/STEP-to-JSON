@@ -1,10 +1,13 @@
+const path = require("path");
+
 module.exports = {
-    entry: './lib/parser.js',
+    entry: './src/parser.js',
     output: {
-        path: __dirname + '/dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: 'parser.js',
         library: 'StepToJsonParser',
-        libraryTarget: "umd"
+        libraryTarget: 'umd',
+        globalObject: 'this',
     },
     module: {
         rules: [{
@@ -16,7 +19,4 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js']
     },
-    node: {
-        fs: 'empty'
-    }
 };
