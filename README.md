@@ -23,7 +23,7 @@ The most simple way to convert your STEP file's assembly structure into JSON is 
 
 ```javascript
 // Add to your imports
-const StepToJsonParser = require('step-to-json');
+const StepToJsonParser = require('step-to-json').StepToJsonParser;
 
 // To get your STEP-file's assembly structure as JSON:
 const filePath = "this should be a valid path to your STEP-file"
