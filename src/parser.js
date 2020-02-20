@@ -1,4 +1,6 @@
-import { Subject } from "rxjs";
+import {
+    Subject
+} from "rxjs";
 
 class StepToJsonParser {
 
@@ -35,11 +37,10 @@ class StepToJsonParser {
     preprocessFile() {
         let lines;
         try {
-            lines = this.file.toString().split(");")
+            lines = this.file.toString().split(/;$\r\n/gm);
         } catch (error) {
             throw new Error(`Error while reading the file, filePath: ${this.file}`, error);
         }
-        
         lines.forEach(line => {
             if (line.includes("FILE_NAME")) {
                 this.preprocessedFile.header.fileName = this.remove_linebreaks(line);
@@ -69,28 +70,21 @@ class StepToJsonParser {
         const assemblyRelations = [];
         Array_of_NEXT_ASSEMBLY_USAGE_OCCURRENCEs.forEach(element => {
             subject.next(progress++)
-            const endOfId = element.indexOf("=");
-            const newId = element.slice(1, endOfId);
-            let newName;
-            let upperPart;
-            let lowerPart;
 
-            const entries = element.split(",");
-            entries.forEach(element => {
+            // get id by splitting at "=" and removing "#"
+            const newId = element.split("=")[0].slice(1);
+            
+            const attributes = this.getAttributes(element);
 
-                if (element.includes("'")) {
-                    newName = element.replace(/['\)]/g, "")
-                } else if (element.includes("#") && upperPart === undefined) {
-                    upperPart = element.replace(/[#]/g, "")
-                } else if (element.includes("#")) {
-                    lowerPart = element.replace(/[#]/g, "")
-                }
-            });
-
-            let assemblyObject = {
+            const name = attributes[0].slice(1, attributes[0].length-1);        // Remove ' (first and last element)
+            const newName = this.fixSpecialChars(name);
+            const container = attributes[3].slice(1);                           // Remove #
+            const contained = attributes[4].slice(1);                           // Remove #
+            
+            const assemblyObject = {
                 id: newId,
-                container: upperPart,
-                contains: lowerPart,
+                container: container,
+                contains: contained,
             }
             assemblyRelations.push(assemblyObject);
         });
@@ -103,28 +97,23 @@ class StepToJsonParser {
     /**
      * Parses the lines of the product definition and extracts id and name
      *
-     * @param {Array<string>} productDefinitions
+     * @param {Array<string>} productDefinitionLines
      * @param {Subject} subject Subject that can be used to track this function's state
      * @returns
      */
-    parseProductDefinitions(productDefinitions, subject = new Subject()) {
+    parseProductDefinitions(productDefinitionLines, subject = new Subject()) {
         let progress = 1;
 
         const products = [];
 
-        productDefinitions.forEach(element => {
+        productDefinitionLines.forEach(pDLine => {
             subject.next(progress++);
-            let endOfId = element.indexOf("=");
-            let newId = element.slice(1, endOfId);
-            let newName;
 
-            let entries = element.split(",");
-            entries.forEach(element => {
+            const attributes = this.getAttributes(pDLine);
 
-                if (element.includes("'")) {
-                    newName = element.replace(/['\)]/g, "")
-                }
-            });
+            const newId = pDLine.split("=")[0].slice(1);                    // Remove #
+            const newName = attributes[0].slice(1, attributes[0].length-1); // Remove ' (first and last element)
+
             let productObject = {
                 id: newId,
                 name: newName
@@ -140,6 +129,10 @@ class StepToJsonParser {
 
     // identify rootAssemblyObject
     identifyRootAssembly() {
+        if(this.products.length == 1) {
+            return this.products[0];
+        } 
+
         for (const product of this.products) {
             // Look for a relation where product is the container
             const productIsContainer = this.relations.some(relation => {
@@ -190,7 +183,7 @@ class StepToJsonParser {
         return structureObject;
     }
 
-    
+
     /**
      * Checks if a productId serves as a container for other products
      *
@@ -239,6 +232,35 @@ class StepToJsonParser {
         return str.replace(/[\r\n]+/gm, "");
     }
 
+    
+    /**
+     * Returns attributes of a line that are defined inside parantheses
+     * @param {*} line One line of a STEP-file
+     * @returns {Array<string>} An array of attributes
+     */
+    getAttributes(line) {
+        const openParentheses = line.indexOf("(")+1;
+        const closingParentheses = line.indexOf(")");
+        const attributes = line.slice(openParentheses, closingParentheses).split(",");
+        return attributes;
+    }
+
+
+    /**
+     * Fixes German umlauts
+     * @param {string} string The string that will be fixed
+     */
+    fixSpecialChars(string) {
+        string.replace("\X\C4", "Ae");
+        string.replace("\X\E4", "ae");
+        string.replace("\X\D6", "Oe");
+        string.replace("\X\F6", "oe");
+        string.replace("\X\DC", "Ue");
+        string.replace("\X\FC", "ue");
+    }
+
 }
 
-export {StepToJsonParser};
+export {
+    StepToJsonParser
+};
