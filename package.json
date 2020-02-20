@@ -7,8 +7,10 @@
     "dist"
   ],
   "scripts": {
+    "lint": "eslint src test",
     "test": "mocha --require @babel/register",
     "build": "npm run webpack",
+    "prepublishOnly": "npm run test && npm run build",
     "webpack": "webpack"
   },
   "repository": {
@@ -42,8 +44,14 @@
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/register": "^7.8.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
     "mocha": "^7.0.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"

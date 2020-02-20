@@ -1,0 +1,15 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      // "comma-dangle": ["error", "only-multiline"],
+      // "no-plusplus": "off",
+      // "no-return-assign": ["error", "except-parens"],
+      // "max-len": [2, 120, 2, {"ignoreComments": true}],
+      // "prefer-destructuring": "off",
+      // "no-param-reassign": "off"
+    }
+  }
