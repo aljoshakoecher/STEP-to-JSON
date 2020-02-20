@@ -3,67 +3,67 @@
     "name": "Zusammebau",
     "contains": [{
         "id": "19265",
-        "name": "T111",
+        "name": "T1",
         "contains": []
     }, {
         "id": "19266",
-        "name": "T113",
+        "name": "T1_1",
         "contains": []
     }, {
         "id": "19267",
-        "name": "Querbalken-0116",
+        "name": "Querbalken-01",
         "contains": []
     }, {
         "id": "19268",
-        "name": "Querbalken-0115",
+        "name": "Querbalken-01_1",
         "contains": []
     }, {
         "id": "19269",
-        "name": "Querbalken-0114",
+        "name": "Querbalken-01_2",
         "contains": []
     }, {
         "id": "19270",
-        "name": "Querbalken-0113",
+        "name": "Querbalken-01_3",
         "contains": []
     }, {
         "id": "19271",
-        "name": "T114",
+        "name": "T1_2",
         "contains": []
     }, {
         "id": "19272",
-        "name": "T112",
+        "name": "T1_3",
         "contains": []
     }, {
         "id": "19273",
-        "name": "Querbalken_unten-013",
+        "name": "Querbalken_unten-01",
         "contains": []
     }, {
         "id": "19274",
-        "name": "Querbalken_unten-014",
+        "name": "Querbalken_unten-01_1",
         "contains": []
     }, {
         "id": "19277",
-        "name": "T19",
+        "name": "Eckbalken_Mitte",
         "contains": []
     }, {
         "id": "19275",
-        "name": "Querbalken_unten-0125",
+        "name": "Querbalken_unten-01_2",
         "contains": []
     }, {
         "id": "19275",
-        "name": "Querbalken_unten-0125",
+        "name": "Querbalken_unten-01_2",
         "contains": []
     }, {
         "id": "19276",
-        "name": "Querbalken_unten-0127",
+        "name": "Querbalken_unten-01_3",
         "contains": []
     }, {
         "id": "19276",
-        "name": "Querbalken_unten-0127",
+        "name": "Querbalken_unten-01_3",
         "contains": []
     }, {
         "id": "19277",
-        "name": "T19",
+        "name": "Eckbalken_Mitte",
         "contains": []
     }, {
         "id": "19278",
@@ -78,87 +78,87 @@
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
+            "name": "Kantholz_14",
             "contains": []
         }, {
             "id": "19281",
-            "name": "Kantholz_3",
-            "contains": []
-        }, {
-            "id": "19282",
-            "name": "Kantholz_4",
-            "contains": []
-        }, {
-            "id": "19283",
-            "name": "Kantholz_5",
-            "contains": []
-        }, {
-            "id": "19293",
             "name": "Kantholz_2",
             "contains": []
         }, {
+            "id": "19282",
+            "name": "Kantholz_3",
+            "contains": []
+        }, {
+            "id": "19283",
+            "name": "Kantholz_4",
+            "contains": []
+        }, {
+            "id": "19293",
+            "name": "Kantholz_14",
+            "contains": []
+        }, {
             "id": "19284",
-            "name": "Kantholz_6",
+            "name": "Kantholz_5",
             "contains": []
         }, {
             "id": "19285",
-            "name": "Kantholz_7",
+            "name": "Kantholz_6",
             "contains": []
         }, {
             "id": "19286",
+            "name": "Kantholz_7",
+            "contains": []
+        }, {
+            "id": "19293",
+            "name": "Kantholz_14",
+            "contains": []
+        }, {
+            "id": "19287",
             "name": "Kantholz_8",
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
-            "contains": []
-        }, {
-            "id": "19287",
-            "name": "Kantholz_9",
-            "contains": []
-        }, {
-            "id": "19293",
-            "name": "Kantholz_2",
+            "name": "Kantholz_14",
             "contains": []
         }, {
             "id": "19288",
-            "name": "Kantholz_10",
+            "name": "Kantholz_9",
             "contains": []
         }, {
             "id": "19289",
-            "name": "Kantholz_11",
+            "name": "Kantholz_10",
             "contains": []
         }, {
             "id": "19290",
+            "name": "Kantholz_11",
+            "contains": []
+        }, {
+            "id": "19293",
+            "name": "Kantholz_14",
+            "contains": []
+        }, {
+            "id": "19291",
             "name": "Kantholz_12",
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
+            "name": "Kantholz_14",
             "contains": []
         }, {
-            "id": "19291",
+            "id": "19292",
             "name": "Kantholz_13",
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
-            "contains": []
-        }, {
-            "id": "19292",
             "name": "Kantholz_14",
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
+            "name": "Kantholz_14",
             "contains": []
         }, {
             "id": "19293",
-            "name": "Kantholz_2",
-            "contains": []
-        }, {
-            "id": "19293",
-            "name": "Kantholz_2",
+            "name": "Kantholz_14",
             "contains": []
         }, {
             "id": "19294",
