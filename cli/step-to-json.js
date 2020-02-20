@@ -66,7 +66,6 @@ const products = parser.parseProductDefinitions(preprocessedObject.data.productD
 
 
 const rootAssemblyObject = parser.identifyRootAssembly();
-console.log(rootAssemblyObject);
 
 
 // add recursively to assembly object
@@ -87,9 +86,8 @@ buildSubject.subscribe({
 // build first level assembly object
 const result = parser.buildStructureObject(rootAssemblyObject, buildSubject);
 
+const newFileName = argv.fileName.split(".stp")[0] + ".json";
+fs.writeFileSync(newFileName, JSON.stringify(result));
 
-//  provide feedback
 console.log("Success!".green)
 console.timeLog("Elapsed time")
-
-
