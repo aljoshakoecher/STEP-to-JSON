@@ -5,8 +5,13 @@
       "mocha": true
     },
     "rules": {
-      // "comma-dangle": ["error", "only-multiline"],
-      // "no-plusplus": "off",
+        "indent": ["error", 4],
+        "padded-blocks": ["error", {"classes": "always"}],
+        "max-len": [2, 150, 2, {"ignoreComments": true}],
+        "no-plusplus": "off",
+        "import/prefer-default-export": "off",
+        "object-shorthand": "off"
+          // "comma-dangle": ["error", "only-multiline"],
       // "no-return-assign": ["error", "except-parens"],
       // "max-len": [2, 120, 2, {"ignoreComments": true}],
       // "prefer-destructuring": "off",
