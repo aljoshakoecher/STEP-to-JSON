@@ -1,23 +1,21 @@
-import {
-    Subject
-} from "rxjs";
+import { Subject } from 'rxjs';
+import { v4 as uuidv4 } from 'uuid';
 
 class StepToJsonParser {
 
     constructor(file) {
         this.file = file;
-        // preprocessed object
         this.preprocessedFile = {
             header: {
-                fileDescription: "",
-                fileName: "",
-                fileSchema: "",
+                fileDescription: '',
+                fileName: '',
+                fileSchema: '',
             },
             data: {
                 productDefinitions: [],
                 nextAssemblyUsageOccurences: [],
-            }
-        }
+            },
+        };
         this.preprocessFile();
     }
 
@@ -25,35 +23,41 @@ class StepToJsonParser {
      * Parses a STEP file and outputs its contents as a JSON tree
      * @param {Subject} sub A subject that can be used to track progress
      */
-    parse(sub = new Subject()) {
+    parse(visitorFunction = undefined, sub = new Subject()) {
         this.parseProductDefinitions(this.preprocessedFile.data.productDefinitions);
         this.parseNextAssemblyUsageOccurences(this.preprocessedFile.data.nextAssemblyUsageOccurences);
-        const rootAssembly = this.identifyRootAssembly()
-        const result = this.buildStructureObject(rootAssembly);
+        const rootAssembly = this.identifyRootAssembly();
+        const result = this.buildStructureObject(rootAssembly, sub, visitorFunction);
         return result;
+    }
+
+    parseWithUuid() {
+        return this.parse(StepToJsonParser.uuidVisitor);
     }
 
 
     preprocessFile() {
         let lines;
         try {
-            lines = this.file.toString().split(/;$\r\n/gm);
+            lines = this.file.toString().split(');');
         } catch (error) {
             throw new Error(`Error while reading the file, filePath: ${this.file}`, error);
         }
-        lines.forEach(line => {
-            if (line.includes("FILE_NAME")) {
-                this.preprocessedFile.header.fileName = this.remove_linebreaks(line);
-            } else if (line.includes("FILE_SCHEMA")) {
-                this.preprocessedFile.header.fileSchema = this.remove_linebreaks(line);
-            } else if (line.includes("FILE_DESCRIPTION")) {
-                this.preprocessedFile.header.fileDescription = this.remove_linebreaks(line);
-            } else if (line.includes("PRODUCT_DEFINITION(")) {
-                this.preprocessedFile.data.productDefinitions.push(this.remove_linebreaks(line));
-            } else if (line.includes("NEXT_ASSEMBLY_USAGE_OCCURRENCE(")) {
-                this.preprocessedFile.data.nextAssemblyUsageOccurences.push(this.remove_linebreaks(line));
+
+        lines.forEach((line) => {
+            if (line.includes('FILE_NAME')) {
+                this.preprocessedFile.header.fileName = StepToJsonParser.removeLinebreaks(line);
+            } else if (line.includes('FILE_SCHEMA')) {
+                this.preprocessedFile.header.fileSchema = StepToJsonParser.removeLinebreaks(line);
+            } else if (line.includes('FILE_DESCRIPTION')) {
+                this.preprocessedFile.header.fileDescription = StepToJsonParser.removeLinebreaks(line);
+            } else if (line.includes('PRODUCT_DEFINITION(')) {
+                this.preprocessedFile.data.productDefinitions.push(StepToJsonParser.removeLinebreaks(line));
+            } else if (line.includes('NEXT_ASSEMBLY_USAGE_OCCURRENCE(')) {
+                this.preprocessedFile.data.nextAssemblyUsageOccurences.push(StepToJsonParser.removeLinebreaks(line));
             }
-        })
+        });
+
         return this.preprocessedFile;
     }
 
@@ -61,31 +65,29 @@ class StepToJsonParser {
     /**
      * Parses the lines of the next assembly usage occurrence and extracts id of relation, container id, contained id and contained name
      *
-     * @param {Array<string>} Array_of_NEXT_ASSEMBLY_USAGE_OCCURRENCEs
+     * @param {Array<string>} nextAssemblyUsageOccurences
      * @param {Subject} subject Subject that can be used to track this function's state
      * @returns
      */
-    parseNextAssemblyUsageOccurences(Array_of_NEXT_ASSEMBLY_USAGE_OCCURRENCEs, subject = new Subject()) {
+    parseNextAssemblyUsageOccurences(nextAssemblyUsageOccurences, subject = new Subject()) {
         let progress = 1;
         const assemblyRelations = [];
-        Array_of_NEXT_ASSEMBLY_USAGE_OCCURRENCEs.forEach(element => {
-            subject.next(progress++)
+        nextAssemblyUsageOccurences.forEach((element) => {
+            subject.next(progress++);
 
-            // get id by splitting at "=" and removing "#"
-            const newId = element.split("=")[0].slice(1);
-            
-            const attributes = this.getAttributes(element);
+            // get id by splitting at '=' and removing '#'
+            const newId = element.split('=')[0].slice(1);
 
-            const name = attributes[0].slice(1, attributes[0].length-1);        // Remove ' (first and last element)
-            const newName = this.fixSpecialChars(name);
-            const container = attributes[3].slice(1);                           // Remove #
-            const contained = attributes[4].slice(1);                           // Remove #
-            
+            const attributes = StepToJsonParser.getAttributes(element);
+
+            const container = attributes[3].slice(1); // Remove #
+            const contained = attributes[4].slice(1); // Remove #
+
             const assemblyObject = {
                 id: newId,
                 container: container,
                 contains: contained,
-            }
+            };
             assemblyRelations.push(assemblyObject);
         });
         subject.complete();
@@ -106,18 +108,19 @@ class StepToJsonParser {
 
         const products = [];
 
-        productDefinitionLines.forEach(pDLine => {
+        productDefinitionLines.forEach((pDLine) => {
             subject.next(progress++);
 
-            const attributes = this.getAttributes(pDLine);
+            const attributes = StepToJsonParser.getAttributes(pDLine);
 
-            const newId = pDLine.split("=")[0].slice(1);                    // Remove #
-            const newName = attributes[0].slice(1, attributes[0].length-1); // Remove ' (first and last element)
+            const newId = pDLine.split('=')[0].slice(1); // Remove #
+            const name = attributes[0].slice(1, attributes[0].length - 1); // Remove ' (first and last element)
+            const fixedName = StepToJsonParser.fixSpecialChars(name);
 
-            let productObject = {
+            const productObject = {
                 id: newId,
-                name: newName
-            }
+                name: fixedName,
+            };
             products.push(productObject);
 
         });
@@ -129,26 +132,29 @@ class StepToJsonParser {
 
     // identify rootAssemblyObject
     identifyRootAssembly() {
-        if(this.products.length == 1) {
+        if (this.products.length === 1) {
             return this.products[0];
-        } 
+        }
 
-        for (const product of this.products) {
-            // Look for a relation where product is the container
-            const productIsContainer = this.relations.some(relation => {
-                return relation.container === product.id
-            });
-            // Look for a relation where product is contained
-            const productIsContained = this.relations.some(relation => {
-                return relation.contains === product.id
-            });
+        try {
+            let rootComponent;
+            this.products.forEach((product) => {
+                // Look for a relation where product is the container
+                const productIsContainer = this.relations.some((relation) => relation.container === product.id);
 
-            // Root assembly acts a container, but is not contained in any other product
-            if (productIsContainer && !productIsContained) {
-                return product;
-            }
-        };
-        throw new Error("Root component could not be found")
+                // Look for a relation where product is contained
+                const productIsContained = this.relations.some((relation) => relation.contains === product.id);
+
+                // Root assembly acts a container, but is not contained in any other product
+                if (productIsContainer && !productIsContained) {
+                    rootComponent = product;
+                }
+            });
+            return rootComponent;
+        } catch (error) {
+            throw new Error('Root component could not be found');
+        }
+
     }
 
 
@@ -164,21 +170,32 @@ class StepToJsonParser {
      * @param {Subject} buildSubject
      * @returns
      */
-    buildStructureObject(rootProduct, buildSubject = new Subject()) {
+    buildStructureObject(rootProduct, buildSubject = new Subject(), visitorFunction = undefined) {
         let relationsChecked = 0;
         const structureObject = {
             id: rootProduct.id,
             name: rootProduct.name,
-            contains: []
+            contains: [],
+        };
+
+        if (visitorFunction !== undefined) {
+            const visitorResult = visitorFunction(structureObject);
+            structureObject[visitorResult.key] = visitorResult.value;
         }
 
-        this.relations.forEach(relation => {
+        this.relations.forEach((relation) => {
             buildSubject.next(++relationsChecked);
-            if (relation.container == rootProduct.id) {
+            if (relation.container === rootProduct.id) {
                 const containedProduct = this.getContainedProduct(relation.contains);
-                structureObject.contains.push(this.buildStructureObject(containedProduct, buildSubject));
+                structureObject.contains.push(this.buildStructureObject(containedProduct, buildSubject, visitorFunction));
             }
         });
+
+        if (visitorFunction !== undefined) {
+            const visitorResult = visitorFunction(structureObject);
+            structureObject[visitorResult.key] = visitorResult.value;
+        }
+
         buildSubject.complete();
         return structureObject;
     }
@@ -191,9 +208,7 @@ class StepToJsonParser {
      * @returns
      */
     isContainer(productId) {
-        const isContainer = this.relations.some(element => {
-            return (element.container == productId)
-        });
+        const isContainer = this.relations.some((element) => element.container === productId);
         return isContainer;
     }
 
@@ -203,7 +218,7 @@ class StepToJsonParser {
      * @param {string} relationContainsId 'contains-id' of the relation
      */
     getContainedProduct(relationContainsId) {
-        return this.products.find(product => product.id == relationContainsId);
+        return this.products.find((product) => product.id === relationContainsId);
     }
 
 
@@ -214,9 +229,9 @@ class StepToJsonParser {
      * @returns {string} Name of the product
      */
     getProductName(productId) {
-        let productName = "";
-        this.products.forEach(element => {
-            if (element.id == productId) {
+        let productName = '';
+        this.products.forEach((element) => {
+            if (element.id === productId) {
                 productName = element.name;
             }
         });
@@ -228,39 +243,50 @@ class StepToJsonParser {
      * Removes linebreaks that are always present at the end of a line inside a STEP file
      * @param {String} str String that the linebreak will be removed from
      */
-    remove_linebreaks(str) {
-        return str.replace(/[\r\n]+/gm, "");
+    static removeLinebreaks(str) {
+        return str.replace(/[\r\n]+/gm, '');
     }
 
-    
+
     /**
      * Returns attributes of a line that are defined inside parantheses
      * @param {*} line One line of a STEP-file
      * @returns {Array<string>} An array of attributes
      */
-    getAttributes(line) {
-        const openParentheses = line.indexOf("(")+1;
-        const closingParentheses = line.indexOf(")");
-        const attributes = line.slice(openParentheses, closingParentheses).split(",");
+    static getAttributes(line) {
+        const openParentheses = line.indexOf('(') + 1;
+        const closingParentheses = line.indexOf(')');
+        const attributes = line.slice(openParentheses, closingParentheses).split(',');
         return attributes;
     }
 
 
     /**
      * Fixes German umlauts
-     * @param {string} string The string that will be fixed
+     * @param {string} stringToFix The string that will be fixed
      */
-    fixSpecialChars(string) {
-        string.replace("\X\C4", "Ae");
-        string.replace("\X\E4", "ae");
-        string.replace("\X\D6", "Oe");
-        string.replace("\X\F6", "oe");
-        string.replace("\X\DC", "Ue");
-        string.replace("\X\FC", "ue");
+    static fixSpecialChars(stringToFix) {
+        let fixedString = stringToFix;
+
+        if (stringToFix.includes('\\X\\')) {
+            fixedString = stringToFix.replace('\\X\\C4', 'Ae')
+                .replace('\\X\\E4', 'ae')
+                .replace('\\X\\D6', 'Oe')
+                .replace('\\X\\F6', 'oe')
+                .replace('\\X\\DC', 'Ue')
+                .replace('\\X\\FC', 'ue');
+        }
+        return fixedString;
+    }
+
+    static uuidVisitor() {
+        const id = uuidv4();
+        const result = { key: 'uuid', value: id };
+        return result;
     }
 
 }
 
 export {
-    StepToJsonParser
+    StepToJsonParser,
 };
