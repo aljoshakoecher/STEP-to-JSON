@@ -10,7 +10,7 @@
     "lint": "eslint src test",
     "test": "mocha --require @babel/register",
     "build": "npm run webpack",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
     "webpack": "webpack"
   },
   "repository": {
