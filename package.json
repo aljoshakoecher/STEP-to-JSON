@@ -36,6 +36,7 @@
     "cli-progress": "^3.4.0",
     "colors": "^1.4.0",
     "rxjs": "^6.5.4",
+    "uuid": "^3.4.0",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
