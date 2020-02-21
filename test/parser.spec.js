@@ -1,20 +1,44 @@
-import { assert } from "chai"
-import * as fs  from "fs";
-import {StepToJsonParser} from "../src/parser"
+import { assert, expect } from 'chai';
+import * as path from 'path';
+import * as fs from 'fs';
+import { StepToJsonParser } from '../src/parser';
 
 
-const stepFile = fs.readFileSync(__dirname +  "/Workbench.stp")
+const stepFile = fs.readFileSync(path.join(__dirname, '/Workbench.stp'));
 const parser = new StepToJsonParser(stepFile);
 
 
-describe("Testing parser", () => {
-    describe("Testing parse function", () => {
-        it("Parsed STEP-file should match expected result", () => {
+describe('Testing parser', () => {
+    describe('Testing function to parse', () => {
+        it('Parsed STEP-file should match expected result', () => {
             const actualResult = parser.parse();
-            
-            const fileContent = fs.readFileSync(__dirname + "/Workbench.json");
-            const expectedResult = JSON.parse(fileContent)
-            assert.deepEqual(actualResult, expectedResult, "Parsed structure doesn't match the expected structure");
-        })
-    })
-})
+
+            const fileContent = fs.readFileSync(path.join(__dirname, 'Workbench.json'));
+            const expectedResult = JSON.parse(fileContent);
+            assert.deepEqual(actualResult, expectedResult, 'Parsed structure doesn\'t match the expected structure');
+        });
+    });
+
+    describe('Testing parsing with a uuid', () => {
+        it('All entries of parsed structure should contain a property "uuid"', () => {
+            const actualResult = parser.parseWithUuid();
+
+            // Assumption here: If rootObject.contains array has property 'uuid', then all components will have a property 'uuid'
+            actualResult.contains.forEach((containedElement) => {
+                expect(containedElement).to.haveOwnProperty('uuid');
+            });
+        });
+    });
+});
+
+describe('Testing util functions', () => {
+    describe('Testing function to fix special chars', () => {
+        it('Umlauts should be fixed', () => {
+            const stepRenderedTextWithUmlauts = '\\X\\C4 - \\X\\E4 - \\X\\D6 - \\X\\F6 - \\X\\DC - \\X\\FC';
+            const textWithCorrectUmlauts = 'Ae - ae - Oe - oe - Ue - ue';
+
+            assert.equal(StepToJsonParser.fixSpecialChars(stepRenderedTextWithUmlauts), textWithCorrectUmlauts, 'Function should fix German umlauts');
+        });
+    });
+
+});
