@@ -19,8 +19,10 @@ class StepToJsonParser {
         this.preprocessFile();
     }
 
+
     /**
      * Parses a STEP file and outputs its contents as a JSON tree
+     * @param {function} visitorFunction A function that will be executed for every product occurrence of the assembly
      * @param {Subject} sub A subject that can be used to track progress
      */
     parse(visitorFunction = undefined, sub = new Subject()) {
@@ -31,11 +33,19 @@ class StepToJsonParser {
         return result;
     }
 
-    parseWithUuid() {
-        return this.parse(StepToJsonParser.uuidVisitor);
+
+    /**
+     * Parses a STEP file and outputs its contents as a JSON tree. Adds a UUID for every product occurrence
+     * @param {*} sub A subject that can be used to track progress
+     */
+    parseWithUuid(sub = new Subject()) {
+        return this.parse(StepToJsonParser.uuidVisitor, sub);
     }
 
 
+    /**
+     * Splits the STEP-file into single lines and stores all lines that contain product definitions and assembly relations
+     */
     preprocessFile() {
         let lines;
         try {
@@ -130,7 +140,9 @@ class StepToJsonParser {
     }
 
 
-    // identify rootAssemblyObject
+    /**
+     * Identifies the root component that contains all other components
+     */
     identifyRootAssembly() {
         if (this.products.length === 1) {
             return this.products[0];
@@ -158,6 +170,9 @@ class StepToJsonParser {
     }
 
 
+    /**
+     * Returns the preprocessed file
+     */
     getPreProcessedObject() {
         return this.preprocessedFile;
     }
@@ -169,6 +184,13 @@ class StepToJsonParser {
      * @param {Object} rootAssemblyObject
      * @param {Subject} buildSubject
      * @returns
+     */
+
+    /**
+     * Returns a containment structure object for a given product object that has id and name
+     * @param {*} rootProduct The root component of the assembly
+     * @param {*} buildSubject An instance of rxjs Subject that can be used to track this function's progress
+     * @param {*} visitorFunction A function that is executed for every component. Can be used to customize processing or add additional data
      */
     buildStructureObject(rootProduct, buildSubject = new Subject(), visitorFunction = undefined) {
         let relationsChecked = 0;
@@ -279,6 +301,9 @@ class StepToJsonParser {
         return fixedString;
     }
 
+    /**
+     * An exemplary visitor function that creates a UUID
+     */
     static uuidVisitor() {
         const id = uuidv4();
         const result = { key: 'uuid', value: id };
