@@ -66,9 +66,20 @@ onFileChange(fileChangeEvent) {
 
 
 ## API-Documentation
-Functionality includes:
-- main parse function
-- calling single functions separately
-- tracking state when parsing large files
+Functionality of the `StepToJsonParser` class
 
-API-Documentation is coming soon...
+### parse(visitorFunction = undefined, sub = new Subject())
+Main parse function that parses the current STEP file and outputs its contents as a JSON tree. Accepts a visitor function, that is called for every product element. The visitor function always gets the current element with the following attributes passed as an argument:
+```javascript
+{
+    id: any;        // ID string
+    name: any;      // Name string
+    contains: []    // Array of sub components
+}
+```
+The visitor function can be used to manipulate the id or name of products or in general to hook into the parsing process.
+In addition, an rxjs subject can be passed to track the progress. On each new element, the subject emits the number of elements that were parsed.
+
+### parseWithUuid(sub = new Subject())
+The function `parseWithUuid()` is basically one example of the more general `parse()` function shown above. It uses a default visitor function that creates a UUID ID for every element. Just like with `parse()`, you can pass a subject to get notified of the current parsing state. If you don't want to get UUID IDs and want to customize the generated objects, check out the `parse()` function above.
+

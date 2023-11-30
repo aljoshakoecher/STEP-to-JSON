@@ -3,8 +3,7 @@ const colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
 const fs = require("fs");
-const StepToJsonParser = require('./../dist/parser').StepToJsonParser;
-
+const {StepToJsonParser} = require('./../src/parser.js');
 
 
 // cli-tool setup
@@ -67,7 +66,6 @@ const products = parser.parseProductDefinitions(preprocessedObject.data.productD
 
 
 const rootAssemblyObject = parser.identifyRootAssembly();
-console.log(rootAssemblyObject);
 
 
 // add recursively to assembly object
@@ -88,11 +86,8 @@ buildSubject.subscribe({
 // build first level assembly object
 const result = parser.buildStructureObject(rootAssemblyObject, buildSubject);
 
-// write file
-parser.writeFile(result);
+const newFileName = argv.fileName.split(".stp")[0] + ".json";
+fs.writeFileSync(newFileName, JSON.stringify(result));
 
-//  provide feedback
 console.log("Success!".green)
 console.timeLog("Elapsed time")
-
-
