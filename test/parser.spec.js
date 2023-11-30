@@ -1,10 +1,11 @@
-import { assert, expect } from 'chai';
-import * as path from 'path';
-import * as fs from 'fs';
-import { StepToJsonParser } from '../src/parser';
+const assert = require('chai').assert;
+const expect = require('chai').expect;
+const { join } = require('path');
+const { readFileSync } = require('fs');
+const { StepToJsonParser } = require('../src/parser.js');
 
 
-const stepFile = fs.readFileSync(path.join(__dirname, '/Workbench.stp'));
+const stepFile = readFileSync(join(__dirname, '/Workbench.stp'));
 const parser = new StepToJsonParser(stepFile);
 
 
@@ -13,7 +14,7 @@ describe('Testing parser', () => {
         it('Parsed STEP-file should match expected result', () => {
             const actualResult = parser.parse();
 
-            const fileContent = fs.readFileSync(path.join(__dirname, 'Workbench.json'));
+            const fileContent = readFileSync(join(__dirname, 'Workbench.json'));
             const expectedResult = JSON.parse(fileContent);
             assert.deepEqual(actualResult, expectedResult, 'Parsed structure doesn\'t match the expected structure');
         });

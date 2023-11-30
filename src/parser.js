@@ -1,5 +1,6 @@
-import { Subject } from 'rxjs';
-import { v4 as uuidv4 } from 'uuid';
+const Subject = require('rxjs').Subject;
+const { v4: uuidv4 } = require('uuid');
+
 
 class StepToJsonParser {
 
@@ -311,7 +312,4 @@ class StepToJsonParser {
     }
 
 }
-
-export {
-    StepToJsonParser,
-};
+exports.StepToJsonParser = StepToJsonParser

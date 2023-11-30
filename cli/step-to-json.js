@@ -3,7 +3,7 @@ const colors = require('colors');
 const yargs = require("yargs/yargs");
 const cliProgress = require('cli-progress');
 const fs = require("fs");
-const StepToJsonParser = require('./../dist/parser').StepToJsonParser;
+const {StepToJsonParser} = require('./../src/parser.js');
 
 
 // cli-tool setup
