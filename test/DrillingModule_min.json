@@ -1,0 +1,3365 @@
+{
+    "id": "966253",
+    "name": "Station 2",
+    "contains": [
+        {
+            "id": "966254",
+            "name": "195783",
+            "contains": [
+                {
+                    "id": "966342",
+                    "name": "Profilplatte 700x350 mit Bohrung komplett",
+                    "contains": [
+                        {
+                            "id": "966343",
+                            "name": "Profilplatte 32x700-342",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966345",
+                            "name": "363203",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966346",
+                    "name": "BA63002507030B_1",
+                    "contains": []
+                },
+                {
+                    "id": "966346",
+                    "name": "BA63002507030B_1",
+                    "contains": []
+                },
+                {
+                    "id": "966359",
+                    "name": "34035",
+                    "contains": []
+                },
+                {
+                    "id": "966350",
+                    "name": "Koppelsensor MPS Sender_komplett",
+                    "contains": [
+                        {
+                            "id": "966351",
+                            "name": "654954",
+                            "contains": []
+                        },
+                        {
+                            "id": "966352",
+                            "name": "165353",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966348",
+                    "name": "Koppelsensor MPS Empf\\X\\E4nger_komplett",
+                    "contains": [
+                        {
+                            "id": "966351",
+                            "name": "654954",
+                            "contains": []
+                        },
+                        {
+                            "id": "966349",
+                            "name": "165323",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966256",
+                    "name": "Lichtleiterger\\X\\E4te 2x komplett",
+                    "contains": [
+                        {
+                            "id": "966351",
+                            "name": "654954",
+                            "contains": []
+                        },
+                        {
+                            "id": "966257",
+                            "name": "165327",
+                            "contains": []
+                        },
+                        {
+                            "id": "966257",
+                            "name": "165327",
+                            "contains": []
+                        },
+                        {
+                            "id": "966258",
+                            "name": "ISO 4762 - M4 x 25",
+                            "contains": []
+                        },
+                        {
+                            "id": "966258",
+                            "name": "ISO 4762 - M4 x 25",
+                            "contains": []
+                        },
+                        {
+                            "id": "966306",
+                            "name": "ISO 4032 - M4",
+                            "contains": []
+                        },
+                        {
+                            "id": "966306",
+                            "name": "ISO 4032 - M4",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966259",
+                    "name": "526871",
+                    "contains": [
+                        {
+                            "id": "966262",
+                            "name": "655621",
+                            "contains": []
+                        },
+                        {
+                            "id": "966260",
+                            "name": "654973",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966267",
+                            "name": "254484",
+                            "contains": []
+                        },
+                        {
+                            "id": "966324",
+                            "name": "165358",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966261",
+                    "name": "653393",
+                    "contains": [
+                        {
+                            "id": "966262",
+                            "name": "655621",
+                            "contains": []
+                        },
+                        {
+                            "id": "966263",
+                            "name": "377576 ",
+                            "contains": []
+                        },
+                        {
+                            "id": "966264",
+                            "name": "656865",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966267",
+                            "name": "254484",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966269",
+                            "name": "347601",
+                            "contains": []
+                        },
+                        {
+                            "id": "966269",
+                            "name": "347601",
+                            "contains": []
+                        },
+                        {
+                            "id": "966270",
+                            "name": "655622 (D_MP3-B-RP) Rutsche 250",
+                            "contains": [
+                                {
+                                    "id": "966271",
+                                    "name": "654974",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966272",
+                                    "name": "654959",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966272",
+                                    "name": "654959",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966275",
+                                    "name": "654975",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966275",
+                                    "name": "654975",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966276",
+                                    "name": "654957",
+                                    "contains": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "966261",
+                    "name": "653393",
+                    "contains": [
+                        {
+                            "id": "966262",
+                            "name": "655621",
+                            "contains": []
+                        },
+                        {
+                            "id": "966263",
+                            "name": "377576 ",
+                            "contains": []
+                        },
+                        {
+                            "id": "966264",
+                            "name": "656865",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966266",
+                            "name": "ISO 4762 - M6 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966267",
+                            "name": "254484",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966269",
+                            "name": "347601",
+                            "contains": []
+                        },
+                        {
+                            "id": "966269",
+                            "name": "347601",
+                            "contains": []
+                        },
+                        {
+                            "id": "966270",
+                            "name": "655622 (D_MP3-B-RP) Rutsche 250",
+                            "contains": [
+                                {
+                                    "id": "966271",
+                                    "name": "654974",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966272",
+                                    "name": "654959",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966272",
+                                    "name": "654959",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966273",
+                                    "name": "347600",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966274",
+                                    "name": "ISO 4762 - M4 x 8",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966275",
+                                    "name": "654975",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966275",
+                                    "name": "654975",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966276",
+                                    "name": "654957",
+                                    "contains": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "966278",
+                    "name": "195777",
+                    "contains": [
+                        {
+                            "id": "966279",
+                            "name": "645717",
+                            "contains": []
+                        },
+                        {
+                            "id": "966296",
+                            "name": "ISO 2338 - 5 m6 x 10 - A",
+                            "contains": []
+                        },
+                        {
+                            "id": "966309",
+                            "name": "ISO 4762 - M4 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966309",
+                            "name": "ISO 4762 - M4 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966280",
+                            "name": "645716",
+                            "contains": []
+                        },
+                        {
+                            "id": "966281",
+                            "name": "ISO 4762 - M4 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966281",
+                            "name": "ISO 4762 - M4 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966282",
+                            "name": "526387",
+                            "contains": []
+                        },
+                        {
+                            "id": "966282",
+                            "name": "526387",
+                            "contains": []
+                        },
+                        {
+                            "id": "966283",
+                            "name": "ISO 4762 - M3 x 6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966283",
+                            "name": "ISO 4762 - M3 x 6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966283",
+                            "name": "ISO 4762 - M3 x 6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966283",
+                            "name": "ISO 4762 - M3 x 6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966284",
+                            "name": "530907",
+                            "contains": [
+                                {
+                                    "id": "966285",
+                                    "name": "530907_1",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966286",
+                                    "name": "530907_2",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966303",
+                            "name": "175056",
+                            "contains": []
+                        },
+                        {
+                            "id": "966303",
+                            "name": "175056",
+                            "contains": []
+                        },
+                        {
+                            "id": "966287",
+                            "name": "173212",
+                            "contains": []
+                        },
+                        {
+                            "id": "966287",
+                            "name": "173212",
+                            "contains": []
+                        },
+                        {
+                            "id": "966287",
+                            "name": "173212",
+                            "contains": []
+                        },
+                        {
+                            "id": "966287",
+                            "name": "173212",
+                            "contains": []
+                        },
+                        {
+                            "id": "966288",
+                            "name": "016-218",
+                            "contains": []
+                        },
+                        {
+                            "id": "966288",
+                            "name": "016-218",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966289",
+                            "name": "DIN 913 - M8 x 45",
+                            "contains": []
+                        },
+                        {
+                            "id": "966289",
+                            "name": "DIN 913 - M8 x 45",
+                            "contains": []
+                        },
+                        {
+                            "id": "966290",
+                            "name": "ISO 4032 - M8",
+                            "contains": []
+                        },
+                        {
+                            "id": "966290",
+                            "name": "ISO 4032 - M8",
+                            "contains": []
+                        },
+                        {
+                            "id": "966291",
+                            "name": "701409",
+                            "contains": []
+                        },
+                        {
+                            "id": "966296",
+                            "name": "ISO 2338 - 5 m6 x 10 - A",
+                            "contains": []
+                        },
+                        {
+                            "id": "966292",
+                            "name": "525704",
+                            "contains": []
+                        },
+                        {
+                            "id": "966293",
+                            "name": "158981",
+                            "contains": []
+                        },
+                        {
+                            "id": "966293",
+                            "name": "158981",
+                            "contains": []
+                        },
+                        {
+                            "id": "966294",
+                            "name": "645715",
+                            "contains": []
+                        },
+                        {
+                            "id": "966295",
+                            "name": "ISO 4762 - M4 x 30",
+                            "contains": []
+                        },
+                        {
+                            "id": "966295",
+                            "name": "ISO 4762 - M4 x 30",
+                            "contains": []
+                        },
+                        {
+                            "id": "966296",
+                            "name": "ISO 2338 - 5 m6 x 10 - A",
+                            "contains": []
+                        },
+                        {
+                            "id": "966297",
+                            "name": "701423",
+                            "contains": []
+                        },
+                        {
+                            "id": "966309",
+                            "name": "ISO 4762 - M4 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966309",
+                            "name": "ISO 4762 - M4 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966299",
+                            "name": "161241",
+                            "contains": [
+                                {
+                                    "id": "966300",
+                                    "name": "161241_1",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966301",
+                                    "name": "161241_2",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966302",
+                            "name": "ISO 7046-1 - M4 x 10 - 4.8 - H",
+                            "contains": []
+                        },
+                        {
+                            "id": "966302",
+                            "name": "ISO 7046-1 - M4 x 10 - 4.8 - H",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966303",
+                            "name": "175056",
+                            "contains": []
+                        },
+                        {
+                            "id": "966303",
+                            "name": "175056",
+                            "contains": []
+                        },
+                        {
+                            "id": "966304",
+                            "name": "150855",
+                            "contains": []
+                        },
+                        {
+                            "id": "966304",
+                            "name": "150855",
+                            "contains": []
+                        },
+                        {
+                            "id": "966305",
+                            "name": "669223",
+                            "contains": []
+                        },
+                        {
+                            "id": "966308",
+                            "name": "656856",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966306",
+                            "name": "ISO 4032 - M4",
+                            "contains": []
+                        },
+                        {
+                            "id": "966306",
+                            "name": "ISO 4032 - M4",
+                            "contains": []
+                        },
+                        {
+                            "id": "966307",
+                            "name": "655630",
+                            "contains": []
+                        },
+                        {
+                            "id": "966308",
+                            "name": "656856",
+                            "contains": []
+                        },
+                        {
+                            "id": "966309",
+                            "name": "ISO 4762 - M4 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966310",
+                            "name": "658570",
+                            "contains": [
+                                {
+                                    "id": "966311",
+                                    "name": "645719",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966312",
+                                    "name": "701422",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966314",
+                                    "name": "ISO 4762 - M5 x 12",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966314",
+                                    "name": "ISO 4762 - M5 x 12",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966315",
+                                    "name": "526037",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966316",
+                                    "name": "DIN 7991 - M5x16",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966316",
+                                    "name": "DIN 7991 - M5x16",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966316",
+                                    "name": "DIN 7991 - M5x16",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966316",
+                                    "name": "DIN 7991 - M5x16",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966317",
+                                    "name": "191663",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966318",
+                                    "name": "BA63002507030B",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966318",
+                                    "name": "BA63002507030B",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966319",
+                            "name": "163266",
+                            "contains": []
+                        },
+                        {
+                            "id": "966320",
+                            "name": "1254040",
+                            "contains": [
+                                {
+                                    "id": "966321",
+                                    "name": "1254040_1",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966322",
+                                    "name": "1254040_2",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966322",
+                                    "name": "1254040_2",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966323",
+                            "name": "153301",
+                            "contains": []
+                        },
+                        {
+                            "id": "966323",
+                            "name": "153301",
+                            "contains": []
+                        },
+                        {
+                            "id": "966324",
+                            "name": "165358",
+                            "contains": []
+                        },
+                        {
+                            "id": "966325",
+                            "name": "645720",
+                            "contains": []
+                        },
+                        {
+                            "id": "966325",
+                            "name": "645720",
+                            "contains": []
+                        },
+                        {
+                            "id": "966326",
+                            "name": "ISO 4762 - M3 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966327",
+                            "name": "ISO 4762 - M3 x 5",
+                            "contains": []
+                        },
+                        {
+                            "id": "966327",
+                            "name": "ISO 4762 - M3 x 5",
+                            "contains": []
+                        },
+                        {
+                            "id": "966327",
+                            "name": "ISO 4762 - M3 x 5",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966328",
+                    "name": "18200",
+                    "contains": [
+                        {
+                            "id": "966329",
+                            "name": "18200_1",
+                            "contains": []
+                        },
+                        {
+                            "id": "966330",
+                            "name": "4645",
+                            "contains": []
+                        },
+                        {
+                            "id": "966331",
+                            "name": "CPV10-VI-10 Verschlussplatte rechts",
+                            "contains": []
+                        },
+                        {
+                            "id": "966332",
+                            "name": "161414",
+                            "contains": []
+                        },
+                        {
+                            "id": "966332",
+                            "name": "161414",
+                            "contains": []
+                        },
+                        {
+                            "id": "966333",
+                            "name": "161416",
+                            "contains": []
+                        },
+                        {
+                            "id": "966334",
+                            "name": "3843",
+                            "contains": []
+                        },
+                        {
+                            "id": "966334",
+                            "name": "3843",
+                            "contains": []
+                        },
+                        {
+                            "id": "966335",
+                            "name": "162556",
+                            "contains": []
+                        },
+                        {
+                            "id": "966335",
+                            "name": "162556",
+                            "contains": []
+                        },
+                        {
+                            "id": "966337",
+                            "name": "193683",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966337",
+                            "name": "193683",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966337",
+                            "name": "193683",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966336",
+                            "name": "153319",
+                            "contains": []
+                        },
+                        {
+                            "id": "966337",
+                            "name": "193683",
+                            "contains": []
+                        },
+                        {
+                            "id": "966338",
+                            "name": "ISO 7380 - M4 x 8",
+                            "contains": []
+                        },
+                        {
+                            "id": "966338",
+                            "name": "ISO 7380 - M4 x 8",
+                            "contains": []
+                        },
+                        {
+                            "id": "966339",
+                            "name": "186269",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966432",
+                    "name": "120856",
+                    "contains": [
+                        {
+                            "id": "966433",
+                            "name": "R0120856_BODEN",
+                            "contains": []
+                        },
+                        {
+                            "id": "966434",
+                            "name": "US120856_SEITE_RECHTS",
+                            "contains": []
+                        },
+                        {
+                            "id": "966435",
+                            "name": "SA120856_SEITE_LINKS",
+                            "contains": []
+                        },
+                        {
+                            "id": "966436",
+                            "name": "T0120856_WAGEN-BT",
+                            "contains": []
+                        },
+                        {
+                            "id": "966437",
+                            "name": "PA120856_FACH",
+                            "contains": []
+                        },
+                        {
+                            "id": "966438",
+                            "name": "V0120856_WINKEL",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966440",
+                            "name": "F0120856_KANTENSCHUTZ.2",
+                            "contains": []
+                        },
+                        {
+                            "id": "966440",
+                            "name": "F0120856_KANTENSCHUTZ.2",
+                            "contains": []
+                        },
+                        {
+                            "id": "966441",
+                            "name": "P0120856_FIRMENSCHILD",
+                            "contains": []
+                        },
+                        {
+                            "id": "966442",
+                            "name": "_Lenkrolle",
+                            "contains": [
+                                {
+                                    "id": "966443",
+                                    "name": "687942",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966442",
+                            "name": "_Lenkrolle",
+                            "contains": [
+                                {
+                                    "id": "966443",
+                                    "name": "687942",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966444",
+                            "name": "_Lenkrolle_1",
+                            "contains": [
+                                {
+                                    "id": "966445",
+                                    "name": "687941",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966444",
+                            "name": "_Lenkrolle_1",
+                            "contains": [
+                                {
+                                    "id": "966445",
+                                    "name": "687941",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "966449",
+                    "name": "195764",
+                    "contains": [
+                        {
+                            "id": "966450",
+                            "name": "526206",
+                            "contains": [
+                                {
+                                    "id": "966451",
+                                    "name": "653391",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966452",
+                                    "name": "653390",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966453",
+                                    "name": "645704",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966453",
+                                    "name": "645704",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966454",
+                                    "name": "00653389_GEWINDELEISTE",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966454",
+                                    "name": "00653389_GEWINDELEISTE",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966456",
+                            "name": "195767",
+                            "contains": []
+                        },
+                        {
+                            "id": "966457",
+                            "name": "195766",
+                            "contains": []
+                        },
+                        {
+                            "id": "966458",
+                            "name": "195767_1",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966340",
+                    "name": "540691",
+                    "contains": [
+                        {
+                            "id": "966418",
+                            "name": "687453",
+                            "contains": []
+                        },
+                        {
+                            "id": "966419",
+                            "name": "687454",
+                            "contains": []
+                        },
+                        {
+                            "id": "966420",
+                            "name": "342183",
+                            "contains": []
+                        },
+                        {
+                            "id": "966421",
+                            "name": "DIN 128 - A5",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966423",
+                            "name": "254490",
+                            "contains": []
+                        },
+                        {
+                            "id": "966423",
+                            "name": "254490",
+                            "contains": []
+                        },
+                        {
+                            "id": "966424",
+                            "name": "526275",
+                            "contains": []
+                        },
+                        {
+                            "id": "966425",
+                            "name": "526816",
+                            "contains": []
+                        },
+                        {
+                            "id": "966426",
+                            "name": "687949",
+                            "contains": []
+                        },
+                        {
+                            "id": "966426",
+                            "name": "687949",
+                            "contains": []
+                        },
+                        {
+                            "id": "966427",
+                            "name": "3492",
+                            "contains": []
+                        },
+                        {
+                            "id": "966428",
+                            "name": "531629",
+                            "contains": []
+                        },
+                        {
+                            "id": "966429",
+                            "name": "153479",
+                            "contains": []
+                        },
+                        {
+                            "id": "966430",
+                            "name": "153057",
+                            "contains": []
+                        },
+                        {
+                            "id": "966431",
+                            "name": "526323",
+                            "contains": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "966341",
+            "name": "195782",
+            "contains": [
+                {
+                    "id": "966342",
+                    "name": "Profilplatte 700x350 mit Bohrung komplett",
+                    "contains": [
+                        {
+                            "id": "966343",
+                            "name": "Profilplatte 32x700-342",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966344",
+                            "name": "350439",
+                            "contains": []
+                        },
+                        {
+                            "id": "966345",
+                            "name": "363203",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966346",
+                    "name": "BA63002507030B_1",
+                    "contains": []
+                },
+                {
+                    "id": "966346",
+                    "name": "BA63002507030B_1",
+                    "contains": []
+                },
+                {
+                    "id": "966348",
+                    "name": "Koppelsensor MPS Empf\\X\\E4nger_komplett",
+                    "contains": [
+                        {
+                            "id": "966351",
+                            "name": "654954",
+                            "contains": []
+                        },
+                        {
+                            "id": "966349",
+                            "name": "165323",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966350",
+                    "name": "Koppelsensor MPS Sender_komplett",
+                    "contains": [
+                        {
+                            "id": "966351",
+                            "name": "654954",
+                            "contains": []
+                        },
+                        {
+                            "id": "966352",
+                            "name": "165353",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966355",
+                            "name": "ISO 4032 - M3",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966356",
+                            "name": "ISO 4762 - M4 x 12",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966357",
+                            "name": "ISO 4762 - M3 x 16",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        },
+                        {
+                            "id": "966358",
+                            "name": "526043",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966359",
+                    "name": "34035",
+                    "contains": []
+                },
+                {
+                    "id": "966360",
+                    "name": "00654972_MOD_RUNDSCHALTT_D_MP3-M-RST",
+                    "contains": [
+                        {
+                            "id": "966361",
+                            "name": "652351",
+                            "contains": []
+                        },
+                        {
+                            "id": "966362",
+                            "name": "683472",
+                            "contains": []
+                        },
+                        {
+                            "id": "966365",
+                            "name": "656868",
+                            "contains": []
+                        },
+                        {
+                            "id": "966363",
+                            "name": "652341",
+                            "contains": []
+                        },
+                        {
+                            "id": "966364",
+                            "name": "658556",
+                            "contains": []
+                        },
+                        {
+                            "id": "966365",
+                            "name": "656868",
+                            "contains": []
+                        },
+                        {
+                            "id": "966365",
+                            "name": "656868",
+                            "contains": []
+                        },
+                        {
+                            "id": "966366",
+                            "name": "652345",
+                            "contains": []
+                        },
+                        {
+                            "id": "966367",
+                            "name": "652343 ",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966368",
+                    "name": "00667296_AUSWERFER",
+                    "contains": [
+                        {
+                            "id": "966369",
+                            "name": "664940",
+                            "contains": []
+                        },
+                        {
+                            "id": "966370",
+                            "name": "667298",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966371",
+                    "name": "00667295_SPANNEN_D.MP3-B-SP",
+                    "contains": [
+                        {
+                            "id": "966396",
+                            "name": "00656869_PROFIL_20X40_D_MP3-B-P",
+                            "contains": [
+                                {
+                                    "id": "966397",
+                                    "name": "655628",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966398",
+                                    "name": "191653",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966399",
+                                    "name": "191477(IPM-PN-05-20x40-AL)-220",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966372",
+                            "name": "667297",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966373",
+                    "name": "00654969_MODUL_BOHREN_D_MP3-M-B",
+                    "contains": [
+                        {
+                            "id": "966374",
+                            "name": "00654151_LINEARACHSE_D_MP3-B-LA",
+                            "contains": [
+                                {
+                                    "id": "966375",
+                                    "name": "645719_1",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966376",
+                                    "name": "654960",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966377",
+                                    "name": "376963",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966378",
+                                    "name": "654156",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966379",
+                                    "name": "654152",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966380",
+                                    "name": "331644 ",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966381",
+                                    "name": "526867",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966382",
+                                    "name": "243684",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966383",
+                                    "name": "654149",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966384",
+                                    "name": "00656873_BAUSATZ_ENDSCH._D_MP3-B-BES",
+                                    "contains": [
+                                        {
+                                            "id": "966388",
+                                            "name": "7347",
+                                            "contains": []
+                                        },
+                                        {
+                                            "id": "966389",
+                                            "name": "658573",
+                                            "contains": []
+                                        },
+                                        {
+                                            "id": "966386",
+                                            "name": "656872",
+                                            "contains": []
+                                        },
+                                        {
+                                            "id": "966386",
+                                            "name": "656872",
+                                            "contains": []
+                                        },
+                                        {
+                                            "id": "966388",
+                                            "name": "7347",
+                                            "contains": []
+                                        },
+                                        {
+                                            "id": "966389",
+                                            "name": "658573",
+                                            "contains": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966390",
+                            "name": "00656874_BAUSATZ_BOHRM._D_MP3-B-BM",
+                            "contains": [
+                                {
+                                    "id": "966391",
+                                    "name": "654154",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966392",
+                                    "name": "656875",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966393",
+                                    "name": "326395 ",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966394",
+                                    "name": "658562",
+                                    "contains": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "966395",
+                    "name": "00665108_BOHRLOCH_D_MP3-M-BL-PR",
+                    "contains": [
+                        {
+                            "id": "966396",
+                            "name": "00656869_PROFIL_20X40_D_MP3-B-P",
+                            "contains": [
+                                {
+                                    "id": "966397",
+                                    "name": "655628",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966398",
+                                    "name": "191653",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966399",
+                                    "name": "191477(IPM-PN-05-20x40-AL)-220",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966400",
+                            "name": "667297_1",
+                            "contains": []
+                        },
+                        {
+                            "id": "966401",
+                            "name": "150371",
+                            "contains": []
+                        },
+                        {
+                            "id": "966402",
+                            "name": "665107 ",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966403",
+                    "name": "00658571_SENSOR_IND",
+                    "contains": [
+                        {
+                            "id": "966405",
+                            "name": "150395",
+                            "contains": []
+                        },
+                        {
+                            "id": "966406",
+                            "name": "653375",
+                            "contains": []
+                        },
+                        {
+                            "id": "966407",
+                            "name": "ISO 4036 - M8",
+                            "contains": []
+                        },
+                        {
+                            "id": "966407",
+                            "name": "ISO 4036 - M8",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966408",
+                    "name": "00680075_SENSOR_D.MP3-B-S-18-KAP",
+                    "contains": [
+                        {
+                            "id": "966409",
+                            "name": "674189",
+                            "contains": []
+                        },
+                        {
+                            "id": "966410",
+                            "name": "674188",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966408",
+                    "name": "00680075_SENSOR_D.MP3-B-S-18-KAP",
+                    "contains": [
+                        {
+                            "id": "966409",
+                            "name": "674189",
+                            "contains": []
+                        },
+                        {
+                            "id": "966410",
+                            "name": "674188",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966408",
+                    "name": "00680075_SENSOR_D.MP3-B-S-18-KAP",
+                    "contains": [
+                        {
+                            "id": "966409",
+                            "name": "674189",
+                            "contains": []
+                        },
+                        {
+                            "id": "966410",
+                            "name": "674188",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966412",
+                    "name": "268535",
+                    "contains": []
+                },
+                {
+                    "id": "966412",
+                    "name": "268535",
+                    "contains": []
+                },
+                {
+                    "id": "966413",
+                    "name": "255834",
+                    "contains": []
+                },
+                {
+                    "id": "966413",
+                    "name": "255834",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966413",
+                    "name": "255834",
+                    "contains": []
+                },
+                {
+                    "id": "966413",
+                    "name": "255834",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966414",
+                    "name": "255833",
+                    "contains": []
+                },
+                {
+                    "id": "966415",
+                    "name": "268327",
+                    "contains": []
+                },
+                {
+                    "id": "966415",
+                    "name": "268327",
+                    "contains": []
+                },
+                {
+                    "id": "966415",
+                    "name": "268327",
+                    "contains": []
+                },
+                {
+                    "id": "966415",
+                    "name": "268327",
+                    "contains": []
+                },
+                {
+                    "id": "966415",
+                    "name": "268327",
+                    "contains": []
+                },
+                {
+                    "id": "966416",
+                    "name": "659550",
+                    "contains": []
+                },
+                {
+                    "id": "966432",
+                    "name": "120856",
+                    "contains": [
+                        {
+                            "id": "966433",
+                            "name": "R0120856_BODEN",
+                            "contains": []
+                        },
+                        {
+                            "id": "966434",
+                            "name": "US120856_SEITE_RECHTS",
+                            "contains": []
+                        },
+                        {
+                            "id": "966435",
+                            "name": "SA120856_SEITE_LINKS",
+                            "contains": []
+                        },
+                        {
+                            "id": "966436",
+                            "name": "T0120856_WAGEN-BT",
+                            "contains": []
+                        },
+                        {
+                            "id": "966437",
+                            "name": "PA120856_FACH",
+                            "contains": []
+                        },
+                        {
+                            "id": "966438",
+                            "name": "V0120856_WINKEL",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966439",
+                            "name": "U0120856_VERSTEIFUNG",
+                            "contains": []
+                        },
+                        {
+                            "id": "966440",
+                            "name": "F0120856_KANTENSCHUTZ.2",
+                            "contains": []
+                        },
+                        {
+                            "id": "966440",
+                            "name": "F0120856_KANTENSCHUTZ.2",
+                            "contains": []
+                        },
+                        {
+                            "id": "966441",
+                            "name": "P0120856_FIRMENSCHILD",
+                            "contains": []
+                        },
+                        {
+                            "id": "966442",
+                            "name": "_Lenkrolle",
+                            "contains": [
+                                {
+                                    "id": "966443",
+                                    "name": "687942",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966442",
+                            "name": "_Lenkrolle",
+                            "contains": [
+                                {
+                                    "id": "966443",
+                                    "name": "687942",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966444",
+                            "name": "_Lenkrolle_1",
+                            "contains": [
+                                {
+                                    "id": "966445",
+                                    "name": "687941",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966444",
+                            "name": "_Lenkrolle_1",
+                            "contains": [
+                                {
+                                    "id": "966445",
+                                    "name": "687941",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966447",
+                                    "name": "ISO 4032 - M6",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966448",
+                                    "name": "ISO 4762 - M6 x 10",
+                                    "contains": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "966449",
+                    "name": "195764",
+                    "contains": [
+                        {
+                            "id": "966450",
+                            "name": "526206",
+                            "contains": [
+                                {
+                                    "id": "966451",
+                                    "name": "653391",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966452",
+                                    "name": "653390",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966453",
+                                    "name": "645704",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966453",
+                                    "name": "645704",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966454",
+                                    "name": "00653389_GEWINDELEISTE",
+                                    "contains": []
+                                },
+                                {
+                                    "id": "966454",
+                                    "name": "00653389_GEWINDELEISTE",
+                                    "contains": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "966456",
+                            "name": "195767",
+                            "contains": []
+                        },
+                        {
+                            "id": "966457",
+                            "name": "195766",
+                            "contains": []
+                        },
+                        {
+                            "id": "966458",
+                            "name": "195767_1",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966417",
+                    "name": "540691_1",
+                    "contains": [
+                        {
+                            "id": "966418",
+                            "name": "687453",
+                            "contains": []
+                        },
+                        {
+                            "id": "966419",
+                            "name": "687454",
+                            "contains": []
+                        },
+                        {
+                            "id": "966420",
+                            "name": "342183",
+                            "contains": []
+                        },
+                        {
+                            "id": "966421",
+                            "name": "DIN 128 - A5",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966422",
+                            "name": "ISO 4762 - M5 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966423",
+                            "name": "254490",
+                            "contains": []
+                        },
+                        {
+                            "id": "966423",
+                            "name": "254490",
+                            "contains": []
+                        },
+                        {
+                            "id": "966424",
+                            "name": "526275",
+                            "contains": []
+                        },
+                        {
+                            "id": "966425",
+                            "name": "526816",
+                            "contains": []
+                        },
+                        {
+                            "id": "966426",
+                            "name": "687949",
+                            "contains": []
+                        },
+                        {
+                            "id": "966426",
+                            "name": "687949",
+                            "contains": []
+                        },
+                        {
+                            "id": "966427",
+                            "name": "3492",
+                            "contains": []
+                        },
+                        {
+                            "id": "966428",
+                            "name": "531629",
+                            "contains": []
+                        },
+                        {
+                            "id": "966429",
+                            "name": "153479",
+                            "contains": []
+                        },
+                        {
+                            "id": "966430",
+                            "name": "153057",
+                            "contains": []
+                        },
+                        {
+                            "id": "966431",
+                            "name": "526323",
+                            "contains": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "966432",
+            "name": "120856",
+            "contains": [
+                {
+                    "id": "966433",
+                    "name": "R0120856_BODEN",
+                    "contains": []
+                },
+                {
+                    "id": "966434",
+                    "name": "US120856_SEITE_RECHTS",
+                    "contains": []
+                },
+                {
+                    "id": "966435",
+                    "name": "SA120856_SEITE_LINKS",
+                    "contains": []
+                },
+                {
+                    "id": "966436",
+                    "name": "T0120856_WAGEN-BT",
+                    "contains": []
+                },
+                {
+                    "id": "966437",
+                    "name": "PA120856_FACH",
+                    "contains": []
+                },
+                {
+                    "id": "966438",
+                    "name": "V0120856_WINKEL",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966440",
+                    "name": "F0120856_KANTENSCHUTZ.2",
+                    "contains": []
+                },
+                {
+                    "id": "966440",
+                    "name": "F0120856_KANTENSCHUTZ.2",
+                    "contains": []
+                },
+                {
+                    "id": "966441",
+                    "name": "P0120856_FIRMENSCHILD",
+                    "contains": []
+                },
+                {
+                    "id": "966442",
+                    "name": "_Lenkrolle",
+                    "contains": [
+                        {
+                            "id": "966443",
+                            "name": "687942",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966442",
+                    "name": "_Lenkrolle",
+                    "contains": [
+                        {
+                            "id": "966443",
+                            "name": "687942",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966444",
+                    "name": "_Lenkrolle_1",
+                    "contains": [
+                        {
+                            "id": "966445",
+                            "name": "687941",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966444",
+                    "name": "_Lenkrolle_1",
+                    "contains": [
+                        {
+                            "id": "966445",
+                            "name": "687941",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "966449",
+            "name": "195764",
+            "contains": [
+                {
+                    "id": "966450",
+                    "name": "526206",
+                    "contains": [
+                        {
+                            "id": "966451",
+                            "name": "653391",
+                            "contains": []
+                        },
+                        {
+                            "id": "966452",
+                            "name": "653390",
+                            "contains": []
+                        },
+                        {
+                            "id": "966453",
+                            "name": "645704",
+                            "contains": []
+                        },
+                        {
+                            "id": "966453",
+                            "name": "645704",
+                            "contains": []
+                        },
+                        {
+                            "id": "966454",
+                            "name": "00653389_GEWINDELEISTE",
+                            "contains": []
+                        },
+                        {
+                            "id": "966454",
+                            "name": "00653389_GEWINDELEISTE",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966456",
+                    "name": "195767",
+                    "contains": []
+                },
+                {
+                    "id": "966457",
+                    "name": "195766",
+                    "contains": []
+                },
+                {
+                    "id": "966458",
+                    "name": "195767_1",
+                    "contains": []
+                }
+            ]
+        },
+        {
+            "id": "966432",
+            "name": "120856",
+            "contains": [
+                {
+                    "id": "966433",
+                    "name": "R0120856_BODEN",
+                    "contains": []
+                },
+                {
+                    "id": "966434",
+                    "name": "US120856_SEITE_RECHTS",
+                    "contains": []
+                },
+                {
+                    "id": "966435",
+                    "name": "SA120856_SEITE_LINKS",
+                    "contains": []
+                },
+                {
+                    "id": "966436",
+                    "name": "T0120856_WAGEN-BT",
+                    "contains": []
+                },
+                {
+                    "id": "966437",
+                    "name": "PA120856_FACH",
+                    "contains": []
+                },
+                {
+                    "id": "966438",
+                    "name": "V0120856_WINKEL",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966439",
+                    "name": "U0120856_VERSTEIFUNG",
+                    "contains": []
+                },
+                {
+                    "id": "966440",
+                    "name": "F0120856_KANTENSCHUTZ.2",
+                    "contains": []
+                },
+                {
+                    "id": "966440",
+                    "name": "F0120856_KANTENSCHUTZ.2",
+                    "contains": []
+                },
+                {
+                    "id": "966441",
+                    "name": "P0120856_FIRMENSCHILD",
+                    "contains": []
+                },
+                {
+                    "id": "966442",
+                    "name": "_Lenkrolle",
+                    "contains": [
+                        {
+                            "id": "966443",
+                            "name": "687942",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966442",
+                    "name": "_Lenkrolle",
+                    "contains": [
+                        {
+                            "id": "966443",
+                            "name": "687942",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966444",
+                    "name": "_Lenkrolle_1",
+                    "contains": [
+                        {
+                            "id": "966445",
+                            "name": "687941",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966444",
+                    "name": "_Lenkrolle_1",
+                    "contains": [
+                        {
+                            "id": "966445",
+                            "name": "687941",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        },
+                        {
+                            "id": "966447",
+                            "name": "ISO 4032 - M6",
+                            "contains": []
+                        },
+                        {
+                            "id": "966448",
+                            "name": "ISO 4762 - M6 x 10",
+                            "contains": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "966449",
+            "name": "195764",
+            "contains": [
+                {
+                    "id": "966450",
+                    "name": "526206",
+                    "contains": [
+                        {
+                            "id": "966451",
+                            "name": "653391",
+                            "contains": []
+                        },
+                        {
+                            "id": "966452",
+                            "name": "653390",
+                            "contains": []
+                        },
+                        {
+                            "id": "966453",
+                            "name": "645704",
+                            "contains": []
+                        },
+                        {
+                            "id": "966453",
+                            "name": "645704",
+                            "contains": []
+                        },
+                        {
+                            "id": "966454",
+                            "name": "00653389_GEWINDELEISTE",
+                            "contains": []
+                        },
+                        {
+                            "id": "966454",
+                            "name": "00653389_GEWINDELEISTE",
+                            "contains": []
+                        }
+                    ]
+                },
+                {
+                    "id": "966456",
+                    "name": "195767",
+                    "contains": []
+                },
+                {
+                    "id": "966457",
+                    "name": "195766",
+                    "contains": []
+                },
+                {
+                    "id": "966458",
+                    "name": "195767_1",
+                    "contains": []
+                }
+            ]
+        }
+    ]
+}

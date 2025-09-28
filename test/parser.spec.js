@@ -20,6 +20,20 @@ describe('Testing parser', () => {
         });
     });
 
+
+    describe('Test larger file of the MPS drilling module', () => {
+        it('Should get a proper result', () => {
+            const stepFile = readFileSync(join(__dirname, '/DrillingModule_min.stp'));
+            const newParser = new StepToJsonParser(stepFile);
+
+            const fileContent = readFileSync(join(__dirname, 'DrillingModule_min.json'));
+            const expectedResult = JSON.parse(fileContent);
+            const actualResult = newParser.parse();
+
+            assert.deepEqual(actualResult, expectedResult, 'Parsed structure doesn\'t match the expected structure');
+        });
+    });
+
     describe('Testing parsing with a uuid', () => {
         it('All entries of parsed structure should contain a property "uuid"', () => {
             const actualResult = parser.parseWithUuid();
@@ -43,3 +57,6 @@ describe('Testing util functions', () => {
     });
 
 });
+
+
+

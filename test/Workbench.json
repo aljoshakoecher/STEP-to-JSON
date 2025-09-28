@@ -1,1 +1,217 @@
-{"id":"19264","name":"Zusammebau","contains":[{"id":"19265","name":"T1","contains":[]},{"id":"19266","name":"T1_1","contains":[]},{"id":"19267","name":"Querbalken-01","contains":[]},{"id":"19268","name":"Querbalken-01_1","contains":[]},{"id":"19269","name":"Querbalken-01_2","contains":[]},{"id":"19270","name":"Querbalken-01_3","contains":[]},{"id":"19271","name":"T1_2","contains":[]},{"id":"19272","name":"T1_3","contains":[]},{"id":"19273","name":"Querbalken_unten-01","contains":[]},{"id":"19274","name":"Querbalken_unten-01_1","contains":[]},{"id":"19277","name":"Eckbalken_Mitte","contains":[]},{"id":"19275","name":"Querbalken_unten-01_2","contains":[]},{"id":"19275","name":"Querbalken_unten-01_2","contains":[]},{"id":"19276","name":"Querbalken_unten-01_3","contains":[]},{"id":"19276","name":"Querbalken_unten-01_3","contains":[]},{"id":"19277","name":"Eckbalken_Mitte","contains":[]},{"id":"19278","name":"Tischplatte","contains":[{"id":"19279","name":"Kantholz","contains":[]},{"id":"19280","name":"Kantholz_1","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19281","name":"Kantholz_2","contains":[]},{"id":"19282","name":"Kantholz_3","contains":[]},{"id":"19283","name":"Kantholz_4","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19284","name":"Kantholz_5","contains":[]},{"id":"19285","name":"Kantholz_6","contains":[]},{"id":"19286","name":"Kantholz_7","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19287","name":"Kantholz_8","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19288","name":"Kantholz_9","contains":[]},{"id":"19289","name":"Kantholz_10","contains":[]},{"id":"19290","name":"Kantholz_11","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19291","name":"Kantholz_12","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19292","name":"Kantholz_13","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19293","name":"Kantholz_14","contains":[]},{"id":"19294","name":"Kantholz_15","contains":[]},{"id":"19295","name":"Kantholz_16","contains":[]}]}]}
+{
+    "id": "19264",
+    "name": "Zusammebau",
+    "contains": [
+        {
+            "id": "19265",
+            "name": "T1",
+            "contains": []
+        },
+        {
+            "id": "19266",
+            "name": "T1_1",
+            "contains": []
+        },
+        {
+            "id": "19267",
+            "name": "Querbalken-01",
+            "contains": []
+        },
+        {
+            "id": "19268",
+            "name": "Querbalken-01_1",
+            "contains": []
+        },
+        {
+            "id": "19269",
+            "name": "Querbalken-01_2",
+            "contains": []
+        },
+        {
+            "id": "19270",
+            "name": "Querbalken-01_3",
+            "contains": []
+        },
+        {
+            "id": "19271",
+            "name": "T1_2",
+            "contains": []
+        },
+        {
+            "id": "19272",
+            "name": "T1_3",
+            "contains": []
+        },
+        {
+            "id": "19273",
+            "name": "Querbalken_unten-01",
+            "contains": []
+        },
+        {
+            "id": "19274",
+            "name": "Querbalken_unten-01_1",
+            "contains": []
+        },
+        {
+            "id": "19277",
+            "name": "Eckbalken_Mitte",
+            "contains": []
+        },
+        {
+            "id": "19275",
+            "name": "Querbalken_unten-01_2",
+            "contains": []
+        },
+        {
+            "id": "19275",
+            "name": "Querbalken_unten-01_2",
+            "contains": []
+        },
+        {
+            "id": "19276",
+            "name": "Querbalken_unten-01_3",
+            "contains": []
+        },
+        {
+            "id": "19276",
+            "name": "Querbalken_unten-01_3",
+            "contains": []
+        },
+        {
+            "id": "19277",
+            "name": "Eckbalken_Mitte",
+            "contains": []
+        },
+        {
+            "id": "19278",
+            "name": "Tischplatte",
+            "contains": [
+                {
+                    "id": "19279",
+                    "name": "Kantholz",
+                    "contains": []
+                },
+                {
+                    "id": "19280",
+                    "name": "Kantholz_1",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19281",
+                    "name": "Kantholz_2",
+                    "contains": []
+                },
+                {
+                    "id": "19282",
+                    "name": "Kantholz_3",
+                    "contains": []
+                },
+                {
+                    "id": "19283",
+                    "name": "Kantholz_4",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19284",
+                    "name": "Kantholz_5",
+                    "contains": []
+                },
+                {
+                    "id": "19285",
+                    "name": "Kantholz_6",
+                    "contains": []
+                },
+                {
+                    "id": "19286",
+                    "name": "Kantholz_7",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19287",
+                    "name": "Kantholz_8",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19288",
+                    "name": "Kantholz_9",
+                    "contains": []
+                },
+                {
+                    "id": "19289",
+                    "name": "Kantholz_10",
+                    "contains": []
+                },
+                {
+                    "id": "19290",
+                    "name": "Kantholz_11",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19291",
+                    "name": "Kantholz_12",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19292",
+                    "name": "Kantholz_13",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19293",
+                    "name": "Kantholz_14",
+                    "contains": []
+                },
+                {
+                    "id": "19294",
+                    "name": "Kantholz_15",
+                    "contains": []
+                },
+                {
+                    "id": "19295",
+                    "name": "Kantholz_16",
+                    "contains": []
+                }
+            ]
+        }
+    ]
+}
