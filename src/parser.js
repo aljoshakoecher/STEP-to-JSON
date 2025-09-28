@@ -6,6 +6,8 @@ class StepToJsonParser {
 
     constructor(file) {
         this.file = file;
+        this.products = new Map();
+        this.productDefinitions = [];
         this.preprocessedFile = {
             header: {
                 fileDescription: '',
@@ -13,7 +15,9 @@ class StepToJsonParser {
                 fileSchema: '',
             },
             data: {
+                products: [],
                 productDefinitions: [],
+                productDefinitionFormations: [],
                 nextAssemblyUsageOccurences: [],
             },
         };
@@ -27,6 +31,7 @@ class StepToJsonParser {
      * @param {Subject} sub A subject that can be used to track progress
      */
     parse(visitorFunction = undefined, sub = new Subject()) {
+        this.parseProducts(this.preprocessedFile.data.products);
         this.parseProductDefinitions(this.preprocessedFile.data.productDefinitions);
         this.parseNextAssemblyUsageOccurences(this.preprocessedFile.data.nextAssemblyUsageOccurences);
         const rootAssembly = this.identifyRootAssembly();
@@ -50,7 +55,7 @@ class StepToJsonParser {
     preprocessFile() {
         let lines;
         try {
-            lines = this.file.toString().split(');');
+            lines = this.file.toString().split(';');
         } catch (error) {
             throw new Error(`Error while reading the file, filePath: ${this.file}`, error);
         }
@@ -66,12 +71,29 @@ class StepToJsonParser {
                 this.preprocessedFile.data.productDefinitions.push(StepToJsonParser.removeLinebreaks(line));
             } else if (line.includes('NEXT_ASSEMBLY_USAGE_OCCURRENCE(')) {
                 this.preprocessedFile.data.nextAssemblyUsageOccurences.push(StepToJsonParser.removeLinebreaks(line));
+            } else if (line.includes('PRODUCT(')) {
+                this.preprocessedFile.data.products.push(StepToJsonParser.removeLinebreaks(line));
+            } else if (line.includes('PRODUCT_DEFINITION_FORMATION')) {
+                this.preprocessedFile.data.productDefinitionFormations.push(StepToJsonParser.removeLinebreaks(line));
             }
         });
 
         return this.preprocessedFile;
     }
 
+    /**
+     * Parses PRODUCT elements to get the single component names
+     * @returns A map with products
+     */
+    parseProducts() {
+        // Parse PRODUCT entities for the names
+        this.preprocessedFile.data.products.forEach(line => {
+            const id = line.match(/#(\d+)/)[1];
+            const attributes = StepToJsonParser.getAttributes(line);
+            const name = attributes[0].slice(1, -1); // first param of a PRODUCT entry is the name
+            this.products.set(id, { id, name });
+        });
+    }
 
     /**
      * Parses the lines of the next assembly usage occurrence and extracts id of relation, container id, contained id and contained name
@@ -114,60 +136,124 @@ class StepToJsonParser {
      * @param {Subject} subject Subject that can be used to track this function's state
      * @returns
      */
-    parseProductDefinitions(productDefinitionLines, subject = new Subject()) {
-        let progress = 1;
-
-        const products = [];
-
-        productDefinitionLines.forEach((pDLine) => {
-            subject.next(progress++);
-
-            const attributes = StepToJsonParser.getAttributes(pDLine);
-
-            const newId = pDLine.split('=')[0].slice(1); // Remove #
-            const name = attributes[0].slice(1, attributes[0].length - 1); // Remove ' (first and last element)
-            const fixedName = StepToJsonParser.fixSpecialChars(name);
-
-            const productObject = {
-                id: newId,
-                name: fixedName,
-            };
-            products.push(productObject);
-
+    parseProductDefinitions() {
+        // Parse Formations
+        const formations = new Map();
+        this.preprocessedFile.data.productDefinitionFormations.forEach(line => {
+            const id = line.match(/#(\d+)/)[1];
+            const attributes = StepToJsonParser.getAttributes(line);
+            const productRef = attributes[2].slice(1); // Referenz zu PRODUCT
+            formations.set(id, { id, productRef });
         });
-        subject.complete();
-        this.products = products;
-        return products;
+
+        // Parse PRODUCT_DEFINITIONS and get the name by following the reference chain
+        this.preprocessedFile.data.productDefinitions.forEach(line => {
+            const id = line.match(/#(\d+)/)[1];
+            const attributes = StepToJsonParser.getAttributes(line);
+            const formationRef = attributes[2].slice(1); // #101 -> 101
+
+            // Follow the reference chain (to PRODUCT element)
+            const formation = formations.get(formationRef);
+            if (formation) {
+                const product = this.products.get(formation.productRef);
+                if (product) {
+                    this.productDefinitions.push({
+                        id: id,
+                        name: product.name  // Get the real name from the PRODUCT entry
+                    });
+                }
+            }
+        });
+
     }
 
 
     /**
-     * Identifies the root component that contains all other components
-     */
+    * Identifies the root component that contains all other components
+    */
     identifyRootAssembly() {
-        if (this.products.length === 1) {
-            return this.products[0];
+        if (this.productDefinitions.length === 0) {
+            throw new Error('No products found');
+        }
+
+        if (this.productDefinitions.length === 1) {
+            return this.productDefinitions[0];
         }
 
         try {
-            let rootComponent;
-            this.products.forEach((product) => {
-                // Look for a relation where product is the container
-                const productIsContainer = this.relations.some((relation) => relation.container === product.id);
-
-                // Look for a relation where product is contained
-                const productIsContained = this.relations.some((relation) => relation.contains === product.id);
-
-                // Root assembly acts a container, but is not contained in any other product
-                if (productIsContainer && !productIsContained) {
-                    rootComponent = product;
-                }
+        // Collect all root candidates
+            const rootCandidates = this.productDefinitions.filter((product) => {
+                const productIsContainer = this.relations.some(
+                    (relation) => relation.container === product.id
+                );
+                const productIsContained = this.relations.some(
+                    (relation) => relation.contains === product.id
+                );
+                return productIsContainer && !productIsContained;
             });
-            return rootComponent;
+
+            // Error handling for different scenarios
+            if (rootCandidates.length === 0) {
+                // No root assembly found. Checking for products without relations
+                const productsWithoutRelations = this.productDefinitions.filter(product =>
+                    !this.relations.some(r =>
+                        r.container === product.id || r.contains === product.id
+                    )
+                );
+
+                if (productsWithoutRelations.length === 1) {
+                    return productsWithoutRelations[0];
+                }
+
+                throw new Error('No root component could be identified');
+            }
+
+            if (rootCandidates.length > 1) {
+                // Multiple rootCandidates found
+                // Count all direct and indirect descendants and return the bigger rootCandidate (i.e. with more children)
+                const rootWithMostDescendants = rootCandidates.reduce((prev, current) => {
+                    const prevDescendantCount = this.countAllDescendants(prev.id);
+                    const currentDescendantCount = this.countAllDescendants(current.id);
+
+                    return currentDescendantCount > prevDescendantCount ? current : prev;
+                });
+
+                return rootWithMostDescendants;
+            }
+
+            return rootCandidates[0];
+
         } catch (error) {
-            throw new Error('Root component could not be found');
+            throw new Error(`Root component could not be found: ${error.message}`);
+        }
+    }
+
+    /**
+    * Recursively counts all descendants of a given product
+    * @param {string} productId The ID of the product to count descendants for
+    * @param {Set} visited Set of already visited IDs to prevent infinite loops
+    * @returns {number} Total count of all descendants
+    */
+    countAllDescendants(productId, visited = new Set()) {
+    // Verhindere Endlosschleifen bei zirkulären Referenzen
+        if (visited.has(productId)) {
+            return 0;
+        }
+        visited.add(productId);
+
+        // Finde alle direkten Kinder
+        const directChildren = this.relations
+            .filter(r => r.container === productId)
+            .map(r => r.contains);
+
+        // Zähle direkte Kinder + deren Nachkommen
+        let count = directChildren.length;
+
+        for (const childId of directChildren) {
+            count += this.countAllDescendants(childId, visited);
         }
 
+        return count;
     }
 
 
@@ -210,7 +296,9 @@ class StepToJsonParser {
             buildSubject.next(++relationsChecked);
             if (relation.container === rootProduct.id) {
                 const containedProduct = this.getContainedProduct(relation.contains);
-                structureObject.contains.push(this.buildStructureObject(containedProduct, buildSubject, visitorFunction));
+                if (containedProduct) {
+                    structureObject.contains.push(this.buildStructureObject(containedProduct, buildSubject, visitorFunction));
+                }
             }
         });
 
@@ -241,7 +329,7 @@ class StepToJsonParser {
      * @param {string} relationContainsId 'contains-id' of the relation
      */
     getContainedProduct(relationContainsId) {
-        return this.products.find((product) => product.id === relationContainsId);
+        return this.productDefinitions.find((product) => product.id === relationContainsId);
     }
 
 
@@ -252,13 +340,8 @@ class StepToJsonParser {
      * @returns {string} Name of the product
      */
     getProductName(productId) {
-        let productName = '';
-        this.products.forEach((element) => {
-            if (element.id === productId) {
-                productName = element.name;
-            }
-        });
-        return productName;
+        const product = this.products.get(productId)
+        return product.name;
     }
 
 
@@ -273,12 +356,12 @@ class StepToJsonParser {
 
     /**
      * Returns attributes of a line that are defined inside parantheses
-     * @param {*} line One line of a STEP-file
+     * @param {str} line One line of a STEP-file
      * @returns {Array<string>} An array of attributes
      */
     static getAttributes(line) {
         const openParentheses = line.indexOf('(') + 1;
-        const closingParentheses = line.indexOf(')');
+        const closingParentheses = line.lastIndexOf(')');
         const attributes = line.slice(openParentheses, closingParentheses).split(',');
         return attributes;
     }
